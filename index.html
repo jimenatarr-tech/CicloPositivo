@@ -158,7 +158,7 @@
                 </a>
             </div>
 
-            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel con Botones Manuales) -->
+            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel con Botones Manuales y Autoplay) -->
             <div class="max-w-6xl mx-auto text-left mt-8">
                 <div class="flex items-center justify-between mb-4 px-2">
                     <h3 class="text-lg md:text-xl font-bold tracking-tight uppercase flex items-center gap-2 text-white">
@@ -654,7 +654,7 @@
         </div>
     </footer>
 
-    <!-- Script para inicializar íconos, menús y navegación manual del carrusel -->
+    <!-- Script para inicializar íconos, menús y carrusel automático -->
     <script>
         lucide.createIcons();
 
@@ -679,7 +679,7 @@
             submenuActContent.classList.toggle('hidden');
         });
 
-        // Navegación manual con flechas para el carrusel
+        // Navegación del carrusel (Manual y Automática)
         const carrusel = document.getElementById('carrusel-ciclo');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
@@ -690,6 +690,29 @@
 
         prevBtn.addEventListener('click', () => {
             carrusel.scrollBy({ left: -carrusel.clientWidth * 0.8, behavior: 'smooth' });
+        });
+
+        // Autoplay del carrusel cada 3.5 segundos
+        let autoplay = setInterval(() => {
+            if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
+                // Si llega al final, vuelve al principio de forma suave
+                carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                // Si no, avanza una tarjeta/porción
+                carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
+            }
+        }, 3500);
+
+        // Pausar el autoplay cuando el usuario pone el mouse encima para que pueda leer
+        carrusel.addEventListener('mouseenter', () => clearInterval(autoplay));
+        carrusel.addEventListener('mouseleave', () => {
+            autoplay = setInterval(() => {
+                if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
+                    carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
+                }
+            }, 3500);
         });
     </script>
 </body>

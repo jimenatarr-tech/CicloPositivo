@@ -22,9 +22,11 @@
             min-height: 100vh;
             color: #f8fafc;
         }
-        /* Estilo para mostrar el menú desplegable al hacer hover */
-        .dropdown:hover .dropdown-menu {
-            display: block;
+        /* Estilo para dropdown en desktop por hover */
+        @media (min-width: 768px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
         }
     </style>
 </head>
@@ -38,11 +40,12 @@
                 Ciclo Positivo
             </a>
             
+            <!-- Navegación Desktop -->
             <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-purple-100">
                 <a href="#quienes-somos" class="hover:text-[#41b8bf] transition-colors">Quiénes Somos</a>
                 <a href="#grupos" class="hover:text-[#41b8bf] transition-colors">Grupos de Encuentro</a>
                 
-                <!-- MENÚ DESPLEGABLE: INFORMACIÓN -->
+                <!-- MENÚ DESPLEGABLE DESKTOP -->
                 <div class="relative dropdown group py-4">
                     <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
                         Información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
@@ -60,11 +63,38 @@
                 <a href="#galeria" class="hover:text-[#41b8bf] transition-colors">Galería</a>
                 <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white px-5 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm hover:opacity-90 font-medium" style="background-color: #e30381;">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Instagram
                 </a>
             </nav>
-            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="md:hidden text-white p-2 rounded-lg" style="background-color: #e30381;">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+
+            <!-- Botón Menú Hamburguesa Celular -->
+            <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Celular -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#210933] border-t border-purple-900/50 px-6 py-4 space-y-3 text-purple-100 font-medium">
+            <a href="#quienes-somos" class="block py-2 hover:text-[#41b8bf]">Quiénes Somos</a>
+            <a href="#grupos" class="block py-2 hover:text-[#41b8bf]">Grupos de Encuentro</a>
+            
+            <!-- Submenú Información Celular -->
+            <div class="py-2">
+                <button id="submenu-btn" class="flex items-center justify-between w-full hover:text-[#41b8bf]">
+                    <span>Información</span> <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+                <div id="submenu-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
+                    <a href="#vih" class="block py-1 hover:text-[#41b8bf]">▪ VIH</a>
+                    <a href="#its" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
+                    <a href="#poblacion-trans" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
+                    <a href="#esi" class="block py-1 hover:text-[#41b8bf]">▪ ESI</a>
+                </div>
+            </div>
+
+            <a href="#actividades" class="block py-2 hover:text-[#41b8bf]">Actividades</a>
+            <a href="#datos-utiles" class="block py-2 hover:text-[#41b8bf]">Datos Útiles</a>
+            <a href="#galeria" class="block py-2 hover:text-[#41b8bf]">Galería</a>
+            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="block text-center text-white py-2.5 rounded-full font-medium mt-2" style="background-color: #e30381;">
+                Instagram
             </a>
         </div>
     </header>
@@ -173,7 +203,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: VIH (I = I) -->
+    <!-- SECCIÓN: VIH -->
     <section id="vih" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -254,7 +284,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: ESI (Educación Sexual Integral) -->
+    <!-- SECCIÓN: ESI -->
     <section id="esi" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -280,7 +310,6 @@
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Folclore en Ciclo Positivo</h2>
             </div>
 
-            <!-- Bloque de Folclore -->
             <div class="max-w-3xl mx-auto mb-12">
                 <p class="text-slate-600 mb-4 leading-relaxed font-normal text-sm md:text-base">
                     Abrimos las puertas de nuestra sede en CABA para encontrarnos también desde la danza y la cultura popular.
@@ -443,9 +472,23 @@
         </div>
     </footer>
 
-    <!-- Script para inicializar los íconos de Lucide -->
+    <!-- Script para inicializar íconos y menú móvil interactivo -->
     <script>
         lucide.createIcons();
+
+        // Control del menú hamburguesa en celular
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Control del submenú desplegable en celular
+        const submenuBtn = document.getElementById('submenu-btn');
+        const submenuContent = document.getElementById('submenu-content');
+        submenuBtn.addEventListener('click', () => {
+            submenuContent.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>

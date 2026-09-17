@@ -21,6 +21,11 @@
             background-attachment: fixed;
             color: #f8fafc;
         }
+        /* Forzar máxima nitidez en todas las imágenes */
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen">
@@ -88,7 +93,7 @@
             </div>
 
             <div class="w-full max-w-2xl overflow-hidden shadow-md border border-slate-200 mb-8">
-                <img src="equipo.png" alt="Colectivo Ciclo Positivo" class="w-full h-auto object-cover max-h-[380px]">
+                <img src="equipo.png" alt="Colectivo Ciclo Positivo" class="w-full h-auto object-cover">
             </div>
 
             <div class="w-full max-w-3xl space-y-4 text-slate-600 text-sm md:text-base font-normal text-left md:text-center leading-relaxed">
@@ -133,7 +138,7 @@
                     <div class="bg-purple-50 border border-purple-100 p-4 rounded-xl mb-6 text-xs md:text-sm text-slate-700 space-y-1.5 font-normal">
                         <p>📍 <strong>CABA:</strong> Viernes de 17:30 a 19 hs.</p>
                         <p>📍 <strong>Ushuaia:</strong> Un sábado por mes de 18 a 20 hs.</p>
-                        <p class="pt-1 text-slate-600">💬 Si vivís en <strong>Córdoba</strong> or <strong>Mendoza</strong>, anotate en el formulario para recibir novedades sobre próximos grupos en tu ciudad.</p>
+                        <p class="pt-1 text-slate-600">💬 Si vivís en <strong>Córdoba</strong> o <strong>Mendoza</strong>, anotate en el formulario para recibir novedades sobre próximos grupos en tu ciudad.</p>
                     </div>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfX3ErO3sByvEWGZPPfDldD5B7Xks3jrPLbwWaHhJrVWhQw3w/viewform" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
                         <i data-lucide="external-link" class="w-4 h-4"></i> Inscribite
@@ -141,7 +146,7 @@
                 </div>
                 <!-- Placa a la derecha -->
                 <div class="flex items-center justify-center p-2">
-                    <div class="overflow-hidden shadow-md border border-slate-200 bg-purple-950 max-w-[320px] w-full mx-auto">
+                    <div class="overflow-hidden shadow-md border border-slate-200 bg-purple-950 w-full max-w-[320px] mx-auto rounded-2xl">
                         <img src="gruposdeencuentro.png" alt="Grupos de Encuentro Ciclo Positivo" class="w-full h-auto object-contain">
                     </div>
                 </div>
@@ -149,7 +154,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: I = I (Indetectable = Intransmisible) -->
+    <!-- SECCIÓN: I = I -->
     <section id="i-igual-i" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -194,7 +199,7 @@
         </div>
     </section>
 
-    <!-- OTRAS ACTIVIDADES (CON CLASES DE FOLCLORE) -->
+    <!-- OTRAS ACTIVIDADES (FOLCLORE) -->
     <section id="actividades" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-12">
@@ -202,7 +207,7 @@
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Folclore en Ciclo Positivo</h2>
             </div>
 
-            <!-- Bloque principal de Folclore -->
+            <!-- Bloque de Folclore -->
             <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
                 <div>
                     <p class="text-slate-600 mb-4 leading-relaxed font-normal text-sm md:text-base">
@@ -226,13 +231,13 @@
                 </div>
                 <!-- Flyer de Folclore a la derecha -->
                 <div class="flex items-center justify-center p-2">
-                    <div class="overflow-hidden shadow-md border border-slate-200 bg-purple-950 max-w-[320px] w-full mx-auto rounded-2xl">
+                    <div class="overflow-hidden shadow-md border border-slate-200 bg-purple-950 w-full max-w-[320px] mx-auto rounded-2xl">
                         <img src="folclore.png" alt="Folclore en Ciclo Positivo" class="w-full h-auto object-contain">
                     </div>
                 </div>
             </div>
 
-            <!-- Otras propuestas / Talleres -->
+            <!-- Otras propuestas institucionales -->
             <div class="border-t border-slate-100 pt-12">
                 <div class="text-center max-w-2xl mx-auto mb-8">
                     <h3 class="text-xl md:text-2xl font-bold tracking-tight uppercase" style="color: #2e1044;">Otras propuestas institucionales</h3>
@@ -273,7 +278,7 @@
         </div>
     </section>
 
-    <!-- DATOS ÚTILES PARA PERSONAS QUE VIVEN CON VIH -->
+    <!-- DATOS ÚTILES -->
     <section id="datos-utiles" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">

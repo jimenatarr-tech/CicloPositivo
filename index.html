@@ -356,19 +356,19 @@
                     <i data-lucide="help-circle" class="w-4 h-4"></i> ¿Qué es el VIH?
                 </button>
                 <button onclick="cambiarTab('diferencia')" id="btn-diferencia" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="git-compare" class="w-4 h-4"></i> VIH vs. SIDA
+                    <i data-lucide="git-compare" class="w-4 h-4"></i> VIH vs. sida
                 </button>
                 <button onclick="cambiarTab('test')" id="btn-test" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="search" class="w-4 h-4"></i> ¿Cómo saber si lo tengo?
                 </button>
                 <button onclick="cambiarTab('vias')" id="btn-vias" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="share-2" class="w-4 h-4"></i> Virus y Vías
+                    <i data-lucide="share-2" class="w-4 h-4"></i> Vías de transmisión
                 </button>
                 <button onclick="cambiarTab('prevencion')" id="btn-prevencion" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="shield-check" class="w-4 h-4"></i> Prevención & PrEP/PEP
                 </button>
                 <button onclick="cambiarTab('tratamiento')" id="btn-tratamiento" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="activity" class="w-4 h-4"></i> Tratamiento & I=I
+                    <i data-lucide="activity" class="w-4 h-4"></i> I = I
                 </button>
                 <button onclick="cambiarTab('ley')" id="btn-ley" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="scale" class="w-4 h-4"></i> Ley de VIH
@@ -391,19 +391,19 @@
                     </p>
                 </div>
 
-                <!-- TAB 2: VIH vs SIDA -->
+                <!-- TAB 2: VIH vs sida -->
                 <div id="tab-diferencia" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="git-compare" class="w-6 h-6" style="color: #e30381;"></i> Diferencia entre VIH y SIDA
+                        <i data-lucide="git-compare" class="w-6 h-6" style="color: #e30381;"></i> Diferencia entre VIH y sida
                     </h3>
                     <div class="grid md:grid-cols-2 gap-4 pt-2">
                         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
                             <h4 class="font-bold text-slate-900 mb-1" style="color: #2e1044;">▪ VIH (El Virus)</h4>
-                            <p class="text-xs md:text-sm text-slate-600">Es el agente infeccioso. Tener VIH no significa estar enfermo de SIDA; una persona diagnosticada a tiempo puede no desarrollar síntomas graves jamás.</p>
+                            <p class="text-xs md:text-sm text-slate-600">Es el agente infeccioso. Tener VIH no significa estar enfermo de sida; una persona diagnosticada a tiempo puede no desarrollar síntomas graves jamás.</p>
                         </div>
                         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
-                            <h4 class="font-bold text-slate-900 mb-1" style="color: #e30381;">▪ SIDA (La Etapa Avanzada)</h4>
-                            <p class="text-xs md:text-sm text-slate-600">Síndrome de Inmunodeficiencia Adquirida. Es la etapa avanzada de la infección que ocurre cuando el VIH no ha sido tratado, deteriorando las defensas.</p>
+                            <h4 class="font-bold text-slate-900 mb-1" style="color: #e30381;">▪ sida (La Etapa Avanzada)</h4>
+                            <p class="text-xs md:text-sm text-slate-600">Síndrome de inmunodeficiencia adquirida. Es la etapa avanzada de la infección que ocurre cuando el VIH no ha sido tratado, deteriorando las defensas.</p>
                         </div>
                     </div>
                 </div>
@@ -419,12 +419,17 @@
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
                         La única manera certera de saberlo es a través de un <strong>test de VIH</strong> (análisis de sangre o prueba rápida). Es voluntario, gratuito, confidencial y rápido en hospitales y centros de salud de todo el país.
                     </p>
+                    <div class="pt-2">
+                        <a href="https://buenosaires.gob.ar/gcaba_historico/test-de-vih-y-sifilis-y-centros-de-testeo-0" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm hover:opacity-90 text-slate-900" style="background-color: #41b8bf;">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Si estás en CABA podés buscar el centro de testeo más cercano aquí
+                        </a>
+                    </div>
                 </div>
 
-                <!-- TAB 4: Virus y Vías de Transmisión -->
+                <!-- TAB 4: Vías de transmisión -->
                 <div id="tab-vias" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="share-2" class="w-6 h-6" style="color: #e30381;"></i> ¿Dónde se encuentra y cómo se transmite?
+                        <i data-lucide="share-2" class="w-6 h-6" style="color: #e30381;"></i> Vías de transmisión
                     </h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
                         El virus se encuentra exclusivamente en determinados fluidos corporales de una persona con VIH: **sangre, semen, líquido preseminal, secreciones rectales, vaginales y leche materna.**
@@ -447,32 +452,28 @@
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="shield-check" class="w-6 h-6" style="color: #e30381;"></i> Prevención combinada: PrEP y PEP
                     </h3>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Hoy contamos con múltiples herramientas eficaces de prevención combinada:
-                    </p>
-                    <div class="grid md:grid-cols-3 gap-3 pt-1 text-xs md:text-sm">
-                        <div class="bg-white p-3 rounded-xl border border-slate-200">
-                            <strong>Preservativos / Campos:</strong> Método de barrera clásico altamente eficaz contra el VIH y otras ITS.
+                    <div class="space-y-3 text-xs md:text-sm text-slate-700">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-1">
+                            <strong class="text-slate-900 block font-bold text-sm" style="color: #2e1044;">▪ PrEP (Profilaxis Pre-Exposición):</strong>
+                            <p>Es una de las estrategias de prevención del VIH en la cual las personas que no tienen VIH, pero que tienen prácticas que pueden exponerlos a la transmisión del virus, toman medicación antirretroviral y así reducen la posibilidad de adquirirlo. La PrEP está recomendada por la Organización Mundial de la Salud (OMS) como parte del abordaje de la prevención combinada junto con el preservativo.</p>
                         </div>
-                        <div class="bg-white p-3 rounded-xl border border-slate-200">
-                            <strong>PrEP:</strong> Medicación antirretroviral programada *antes* de tener prácticas sexuales para prevenir la infección.
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-slate-200">
-                            <strong>PEP:</strong> Medicación de emergencia que se toma *dentro de las primeras 72 horas* tras una posible exposición.
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-1">
+                            <strong class="text-slate-900 block font-bold text-sm" style="color: #2e1044;">▪ PEP (Profilaxis Post-Exposición):</strong>
+                            <p>La PEP es el uso de medicamentos para reducir el riesgo de adquirir VIH y otras ITS. En el caso del VIH se deben administrar antirretrovirales dentro de las 72 hs de la situación de riesgo y tomar por 28 días. Recordá que te tienen que brindar el tratamiento completo para que sea efectivo.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 6: Tratamiento e I=I -->
+                <!-- TAB 6: I = I -->
                 <div id="tab-tratamiento" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="activity" class="w-6 h-6" style="color: #e30381;"></i> Tratamiento Antirretroviral e I = I
+                        <i data-lucide="activity" class="w-6 h-6" style="color: #e30381;"></i> I = I
                     </h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        El **Tratamiento Antirretroviral (TAR)** consiste en la toma diaria de medicación que frena la multiplicación del virus en el cuerpo.
+                        Indetectable = intransmisible es un concepto que está relacionado con sostener el tratamiento antirretroviral. Las personas que viven con VIH y toman tratamiento antirretroviral logran disminuir la cantidad de virus por debajo de los valores detectables. A esto llamamos estar indetectable. Y se comprobó que cuando una persona está indetectable deja de transmitir el virus a través de las relaciones sexuales. A medida que tengamos más conocimiento y más resultados de ensayos clínicos, podremos saber si el I = I también aplica para otras formas de transmisión de VIH.
                     </p>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Gracias a esto se alcanza el concepto fundamental de <strong>I = I (Indetectable = Intransmisible)</strong>: cuando una persona mantiene su carga viral indetectable en sangre mediante el tratamiento, **no transmite el virus** por vía sexual.
+                        Estar indetectable no quiere decir que el virus se haya eliminado o negativizado, porque al suspender el tratamiento, el virus vuelve a replicarse. Si una persona deja de tomar el tratamiento, vuelve a tener replicación viral y deja de estar indetectable.
                     </p>
                 </div>
 
@@ -543,7 +544,7 @@
             </div>
             <div class="max-w-3xl mx-auto mb-6">
                 <p class="text-slate-600 mb-4 leading-relaxed font-normal text-sm md:text-base">
-                    Abrimos las puertas de nuestra sede en CABA para encontrarnos también desde la danza y la cultura popular.
+                    Abrimos las puertas de nossa sede en CABA para encontrarnos también desde la danza y la cultura popular.
                 </p>
                 <div class="text-center">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScLycEPcq-biGBwHM3__JE4G3GYNUjawltUHtk5iaoLAzZcDQ/viewform" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">

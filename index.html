@@ -14,9 +14,9 @@
     <!-- HEADER / NAVEGACIÓN -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight flex items-center gap-2" style="color: #2e1044;">
-                <!-- Logo miniatura o ícono -->
-                <span class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-xs" style="background-color: #e30381;">CP</span>
+            <a href="#" class="text-xl font-bold tracking-tight flex items-center gap-3" style="color: #2e1044;">
+                <!-- Logo real integrado -->
+                <img src="ciclo.jpg" alt="Logo Ciclo Positivo" class="w-10 h-10 object-contain rounded-full shadow-xs">
                 Ciclo Positivo
             </a>
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN QUIÉNES SOMOS (Con la esencia del texto completo) -->
+    <!-- SECCIÓN QUIÉNES SOMOS -->
     <section id="quienes-somos" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white p-8 md:p-12 rounded-3xl border border-slate-100 shadow-sm grid md:grid-cols-2 gap-8 items-center">
             <div>
@@ -72,10 +72,8 @@
                 </p>
             </div>
             <div class="rounded-2xl overflow-hidden shadow-md border border-slate-100">
-                <!-- Acá podés poner la foto grupal que pasaste subiéndola a GitHub como 'grupo.jpg' -->
-                <div class="bg-purple-900 h-64 flex items-center justify-center text-purple-200 text-sm font-medium">
-                    [Foto grupal institucional]
-                </div>
+                <!-- Foto grupal real integrada (asegurate de cambiarle el nombre a grupo.jpg o usar el nombre exacto del archivo subido) -->
+                <img src="@ThomasRz.ph-4591.jpg" alt="Colectivo Ciclo Positivo" class="w-full h-auto object-cover max-h-80">
             </div>
         </div>
     </section>
@@ -236,11 +234,17 @@
             <p class="text-slate-600">Momentos compartidos y postales de nuestros encuentros.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-slate-200 aspect-square rounded-2xl flex items-center justify-center text-slate-400 font-medium text-sm border border-slate-300/50">Foto 1</div>
-            <div class="bg-slate-200 aspect-square rounded-2xl flex items-center justify-center text-slate-400 font-medium text-sm border border-slate-300/50">Foto 2</div>
-            <div class="bg-slate-200 aspect-square rounded-2xl flex items-center justify-center text-slate-400 font-medium text-sm border border-slate-300/50">Foto 3</div>
-            <div class="bg-slate-200 aspect-square rounded-2xl flex items-center justify-center text-slate-400 font-medium text-sm border border-slate-300/50">Foto 4</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs">
+                <img src="@ThomasRz.ph-4591.jpg" alt="Encuentro Ciclo Positivo" class="w-full h-64 object-cover rounded-xl">
+            </div>
+            <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-center p-8 text-center" style="background-color: #fdf2f8;">
+                <div>
+                    <i data-lucide="heart" class="w-10 h-10 mx-auto mb-3" style="color: #e30381;"></i>
+                    <h4 class="font-bold text-lg mb-1" style="color: #2e1044;">Comunidad en movimiento</h4>
+                    <p class="text-sm text-slate-600">Construyendo redes y acompañamiento todos los días.</p>
+                </div>
+            </div>
         </div>
         <p class="text-center text-xs text-slate-500 mt-6">Podés ver más imágenes y contenido diario en nuestro perfil de Instagram.</p>
     </section>
@@ -249,8 +253,8 @@
     <footer class="text-white py-12" style="background-color: #2e1044;">
         <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
-                <a href="#" class="text-xl font-bold tracking-tight flex items-center justify-center md:justify-start gap-2 mb-2 text-white">
-                    <i data-lucide="heart-handshake" class="w-6 h-6" style="color: #e30381;"></i>
+                <a href="#" class="text-xl font-bold tracking-tight flex items-center justify-center md:justify-start gap-3 mb-2 text-white">
+                    <img src="ciclo.jpg" alt="Logo" class="w-8 h-8 object-contain rounded-full bg-white/10 p-0.5">
                     Asociación Ciclo Positivo
                 </a>
                 <p class="text-purple-200 text-sm">Comunidad, información y redes de apoyo.</p>

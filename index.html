@@ -58,7 +58,17 @@
                     </div>
                 </div>
 
-                <a href="#folclore" class="hover:text-[#41b8bf] transition-colors">Actividades</a>
+                <!-- MENÚ DESPLEGABLE: ACTIVIDADES -->
+                <div class="relative dropdown group py-4">
+                    <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
+                        Actividades <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="dropdown-menu hidden absolute top-full left-0 w-56 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
+                        <a href="#folclore" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Clases de Folclore</a>
+                        <a href="#curso-activismo" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Curso de Activismo</a>
+                    </div>
+                </div>
+
                 <a href="#datos-utiles" class="hover:text-[#41b8bf] transition-colors">Datos Útiles</a>
                 <a href="#galeria" class="hover:text-[#41b8bf] transition-colors">Galería</a>
                 <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white px-5 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm hover:opacity-90 font-medium" style="background-color: #e30381;">
@@ -91,7 +101,17 @@
                 </div>
             </div>
 
-            <a href="#folclore" class="block py-2 hover:text-[#41b8bf]">Actividades</a>
+            <!-- Submenú Actividades Celular -->
+            <div class="py-2">
+                <button id="submenu-act-btn" class="flex items-center justify-between w-full hover:text-[#41b8bf]">
+                    <span>Actividades</span> <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+                <div id="submenu-act-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
+                    <a href="#folclore" class="block py-1 hover:text-[#41b8bf]">▪ Clases de Folclore</a>
+                    <a href="#curso-activismo" class="block py-1 hover:text-[#41b8bf]">▪ Curso de Activismo (Histórico)</a>
+                </div>
+            </div>
+
             <a href="#datos-utiles" class="block py-2 hover:text-[#41b8bf]">Datos Útiles</a>
             <a href="#galeria" class="block py-2 hover:text-[#41b8bf]">Galería</a>
             <a href="https://instagram.com/ciclo.positivo" target="_blank" class="block text-center text-white py-2.5 rounded-full font-medium mt-2" style="background-color: #e30381;">
@@ -127,8 +147,8 @@
                 <a href="#folclore" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="calendar" class="w-5 h-5"></i> Folclore
                 </a>
-                <a href="#datos-utiles" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
-                    <i data-lucide="shield-check" class="w-5 h-5"></i> Datos Útiles
+                <a href="#curso-activismo" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
+                    <i data-lucide="book-open" class="w-5 h-5"></i> Curso Activismo
                 </a>
                 <a href="#galeria" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="image" class="w-5 h-5"></i> Galería
@@ -336,6 +356,62 @@
         </div>
     </section>
 
+    <!-- SECCIÓN: CURSO DE ACTIVISMO EN SALUD (EDICIÓN HISTÓRICA) -->
+    <section id="curso-activismo" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Formación</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">7ma Edición: Curso de Activismo en Salud</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <p class="text-slate-600 leading-relaxed font-normal text-sm md:text-base">
+                    Un espacio de formación pensado para quienes en Argentina quieren defender el derecho a la salud, acompañar situaciones de vulneración de derechos y desarrollar herramientas para incidir en políticas públicas.
+                </p>
+
+                <!-- Temario / Módulos -->
+                <div class="bg-purple-50 border border-purple-100 p-6 rounded-2xl text-slate-700 text-sm space-y-3 font-normal">
+                    <p class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2" style="color: #2e1044;">📚 Contenidos abordados durante los 6 encuentros:</p>
+                    <ul class="grid sm:grid-cols-2 gap-2 text-xs md:text-sm font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Salud integral y activismo</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Prevención combinada y VIH</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Derecho a la salud y nueva Ley de VIH</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Atención de casos y vulneración de derechos</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Comunicación para la incidencia</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Inteligencia artificial aplicada al activismo</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Incidencia política</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Herramientas para defender derechos</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Intervenciones comunitarias</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Diseño de proyectos sociales</li>
+                    </ul>
+                </div>
+
+                <!-- Detalles de modalidad -->
+                <div class="grid sm:grid-cols-2 gap-4 text-xs md:text-sm text-slate-700 font-medium">
+                    <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-1.5">
+                        <p>📅 <strong>Modalidad:</strong> Sábados (6 encuentros)</p>
+                        <p>💻 <strong>Formato:</strong> 100% virtual (14 a 16 h)</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-1.5">
+                        <p>💛 <strong>Curso gratuito</strong> con cupo limitado</p>
+                        <p>📜 <strong>Incluyó Certificado</strong> oficial</p>
+                    </div>
+                </div>
+
+                <p class="text-xs text-slate-500 italic text-center">
+                    Inició el 11 de abril con cierre de inscripción el 31 de marzo.
+                </p>
+
+                <!-- Botón de Inscripciones Cerradas -->
+                <div class="text-center pt-2">
+                    <button disabled class="inline-flex items-center gap-2 bg-slate-300 text-slate-600 font-semibold px-6 py-3.5 rounded-xl cursor-not-allowed shadow-xs opacity-80">
+                        <i data-lucide="lock" class="w-4 h-4"></i> Inscripciones cerradas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- DATOS ÚTILES -->
     <section id="datos-utiles" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
@@ -450,6 +526,13 @@
         const submenuInfoContent = document.getElementById('submenu-info-content');
         submenuInfoBtn.addEventListener('click', () => {
             submenuInfoContent.classList.toggle('hidden');
+        });
+
+        // Control del submenú Actividades en celular
+        const submenuActBtn = document.getElementById('submenu-act-btn');
+        const submenuActContent = document.getElementById('submenu-act-content');
+        submenuActBtn.addEventListener('click', () => {
+            submenuActContent.classList.toggle('hidden');
         });
     </script>
 </body>

@@ -67,14 +67,13 @@
                     </div>
                 </div>
 
-                <!-- MENÚ DESPLEGABLE: ACTIVIDADES (Incluye Grupos de Encuentro, Folclore y Curso) -->
+                <!-- MENÚ DESPLEGABLE: ACTIVIDADES -->
                 <div class="relative dropdown group py-4">
                     <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
                         Actividades <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
                     </button>
                     <div class="dropdown-menu hidden absolute top-full left-0 w-60 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
-                        <a href="#grupos" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Grupos de Encuentro</a>
-                        <a href="#folclore" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Clases de Folclore</a>
+                        <a href="#actividades" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Grupos de Encuentro y Folclore</a>
                         <a href="#curso-activismo" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Curso de activismo en salud</a>
                     </div>
                 </div>
@@ -117,8 +116,7 @@
                     <span>Actividades</span> <i data-lucide="chevron-down" class="w-4 h-4"></i>
                 </button>
                 <div id="submenu-act-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
-                    <a href="#grupos" class="block py-1 hover:text-[#41b8bf]">▪ Grupos de Encuentro</a>
-                    <a href="#folclore" class="block py-1 hover:text-[#41b8bf]">▪ Clases de Folclore</a>
+                    <a href="#actividades" class="block py-1 hover:text-[#41b8bf]">▪ Grupos y Folclore</a>
                     <a href="#curso-activismo" class="block py-1 hover:text-[#41b8bf]">▪ Curso de activismo en salud</a>
                 </div>
             </div>
@@ -149,7 +147,7 @@
                 <a href="#quienes-somos" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
                     <i data-lucide="users" class="w-5 h-5"></i> Quiénes somos
                 </a>
-                <a href="#grupos" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
+                <a href="#actividades" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
                     <i data-lucide="calendar" class="w-5 h-5"></i> Actividades
                 </a>
                 <a href="#aportar" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
@@ -328,7 +326,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN NUEVA: APORTÁ A CICLO -->
+    <!-- SECCIÓN: APORTÁ A CICLO -->
     <section id="aportar" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -361,24 +359,64 @@
         </div>
     </section>
 
-    <!-- GRUPOS DE ENCUENTRO (ACTIVIDAD) -->
-    <section id="grupos" class="py-20 px-4 max-w-4xl mx-auto">
+    <!-- ANCLA GENERAL DE ACTIVIDADES (Agrupa Grupos de Encuentro y Clases de Folclore) -->
+    <div id="actividades" class="scroll-mt-28"></div>
+
+    <!-- SECCIÓN: GRUPOS DE ENCUENTRO (ACTIVIDADES) -->
+    <section class="py-10 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Grupos de Encuentro</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">¿Qué son y cómo funcionan?</h2>
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Actividades</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Grupos de Encuentro</h2>
             </div>
-            <div class="max-w-3xl mx-auto">
-                <p class="text-slate-600 mb-4 leading-relaxed font-normal text-sm md:text-base">
-                    El grupo de encuentro es un espacio para compartir, escucharnos y acompañarnos, desde una mirada de salud integral comunitaria. Los grupos están abiertos a personas con y sin VIH que quieran encontrarse, hacer preguntas, intercambiar experiencias y construir redes de apoyo.
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    El grupo de encuentro es un espacio para compartir, escucharnos y acompañarnos, desde una mirada de salud integral comunitaria.
                 </p>
-                <div class="bg-purple-50 border border-purple-100 p-4 rounded-xl mb-6 text-xs md:text-sm text-slate-700 space-y-1.5 font-normal">
-                    <p>📍 <strong>CABA:</strong> Viernes de 17:30 a 19 hs.</p>
-                    <p>📍 <strong>Ushuaia:</strong> Un sábado por mes de 18 a 20 hs.</p>
+                <p>
+                    Los grupos están abiertos a personas con y sin VIH que quieran encontrarse, hacer preguntas, intercambiar experiencias y construir redes de apoyo.
+                </p>
+                <div class="bg-purple-50 border border-purple-100 p-4 rounded-xl my-4 text-xs md:text-sm text-slate-700 space-y-2 font-normal">
+                    <p>📍 <strong>CABA:</strong> Todos los viernes de 17:30 a 19:00 hs</p>
+                    <p>📍 <strong>Ushuaia:</strong> Un sábado por mes de 18 a 20 hs</p>
+                    <p class="pt-1 text-slate-800 font-medium">💜 Si vivís en Córdoba o Mendoza, anotate para recibir novedades sobre próximos grupos en tu ciudad.</p>
                 </div>
-                <div class="text-center mt-6">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfX3ErO3sByvEWGZPPfDldD5B7Xks3jrPLbwWaHhJrVWhQw3w/viewform" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
+                <div class="text-center pt-4">
+                    <a href="https://bit.ly/gruposdeencuentro" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
                         <i data-lucide="external-link" class="w-4 h-4"></i> Inscribite a los Grupos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CLASES DE FOLCLORE (ACTIVIDADES) -->
+    <section id="folclore" class="py-10 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Actividades</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Clases de Folclore</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    Abrimos las puertas de nuestra sede en CABA para encontrarnos también desde la danza y la cultura popular.
+                </p>
+                <p>
+                    Se vienen las clases de Folclore en Ciclo Positivo, coordinadas por el profe David Ceballos Tulian: un espacio para aprender, bailar, divertirnos y compartir.
+                </p>
+                <p>
+                    Creemos en la cultura como un espacio de encuentro, expresión y construcción colectiva. Por eso, queremos bailar nuestras danzas populares desde la diversidad, cuestionando los roles tradicionales de género y construyendo un espacio donde cada persona pueda expresarse y disfrutar con libertad. 🏳️‍🌈
+                </p>
+                <div class="bg-purple-50 border border-purple-100 p-4 rounded-xl text-xs md:text-sm text-slate-700 space-y-1.5 font-normal my-4">
+                    <p>🗓️ <strong>Miércoles de 17.30 a 19 h</strong></p>
+                    <p>📍 <strong>Sede de Ciclo Positivo — CABA</strong></p>
+                    <p>💃 <strong>Actividad libre y gratuita</strong></p>
+                    <p class="pt-1 text-slate-600">✨ No necesitás experiencia previa. Si tenés ganas de bailar, divertirte y compartir, este espacio es para vos.</p>
+                </div>
+                <div class="text-center pt-2">
+                    <a href="https://bit.ly/folcloreenciclo" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
+                        <i data-lucide="external-link" class="w-4 h-4"></i> Inscribite a Folclore
                     </a>
                 </div>
             </div>
@@ -595,39 +633,6 @@
                 <p>
                     Promovemos la ESI como un derecho fundamental en todos los ámbitos de la sociedad, fomentando el respeto por la diversidad y la construcción de vínculos saludables y libres de prejuicios.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: CLASES DE FOLCLORE -->
-    <section id="folclore" class="py-20 px-4 max-w-4xl mx-auto">
-        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
-            <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Cultura y Comunidad</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Clases de Folclore</h2>
-            </div>
-
-            <div class="max-w-3xl mx-auto mb-6 space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
-                <p>
-                    Abrimos las puertas de nuestra sede en CABA para encontrarnos también desde la danza y la cultura popular.
-                </p>
-                <p>
-                    Se vienen las clases de Folclore en Ciclo Positivo, coordinadas por el profe David Ceballos Tulian: un espacio para aprender, bailar, divertirnos y compartir.
-                </p>
-                <p>
-                    Creemos en la cultura como un espacio de encuentro, expresión y construcción colectiva. Por eso, queremos bailar nuestras danzas populares desde la diversidad, cuestionando los roles tradicionales de género y construyendo un espacio donde cada persona pueda expresarse y disfrutar con libertad. 🏳️‍🌈
-                </p>
-                <div class="bg-purple-50 border border-purple-100 p-4 rounded-xl text-xs md:text-sm text-slate-700 space-y-1.5 font-normal">
-                    <p>🗓️ <strong>Miércoles de 17.30 a 19 h</strong> (Cada 15 días)</p>
-                    <p>📍 <strong>Sede de Ciclo Positivo — CABA</strong></p>
-                    <p>💃 <strong>Actividad libre y gratuita</strong></p>
-                    <p class="pt-1 text-slate-600">✨ No necesitás experiencia previa. Si tenés ganas de bailar, divertirte y compartir, este espacio es para vos.</p>
-                </div>
-                <div class="text-center pt-2">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScLycEPcq-biGBwHM3__JE4G3GYNUjawltUHtk5iaoLAzZcDQ/viewform" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
-                        <i data-lucide="external-link" class="w-4 h-4"></i> Inscribite a Folclore
-                    </a>
-                </div>
             </div>
         </div>
     </section>

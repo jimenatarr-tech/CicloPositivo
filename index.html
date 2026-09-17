@@ -22,6 +22,10 @@
             min-height: 100vh;
             color: #f8fafc;
         }
+        /* Estilo para mostrar el menú desplegable al hacer hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -33,10 +37,24 @@
                 <img src="ciclo.jpg" alt="Logo Ciclo Positivo" class="w-10 h-10 object-contain rounded-full shadow-xs">
                 Ciclo Positivo
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-purple-100">
+            
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-purple-100">
                 <a href="#quienes-somos" class="hover:text-[#41b8bf] transition-colors">Quiénes Somos</a>
                 <a href="#grupos" class="hover:text-[#41b8bf] transition-colors">Grupos de Encuentro</a>
-                <a href="#i-igual-i" class="hover:text-[#41b8bf] transition-colors">I = I</a>
+                
+                <!-- MENÚ DESPLEGABLE: INFORMACIÓN -->
+                <div class="relative dropdown group py-4">
+                    <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
+                        Información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="dropdown-menu hidden absolute top-full left-0 w-64 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
+                        <a href="#vih" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">VIH</a>
+                        <a href="#its" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Infecciones de transmisión sexual</a>
+                        <a href="#poblacion-trans" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Población trans</a>
+                        <a href="#esi" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">ESI</a>
+                    </div>
+                </div>
+
                 <a href="#actividades" class="hover:text-[#41b8bf] transition-colors">Actividades</a>
                 <a href="#datos-utiles" class="hover:text-[#41b8bf] transition-colors">Datos Útiles</a>
                 <a href="#galeria" class="hover:text-[#41b8bf] transition-colors">Galería</a>
@@ -64,7 +82,7 @@
                 Somos un colectivo de activistas, profesionales y referentes que trabajamos por el acompañamiento integral a poblaciones diversas y en situación de vulnerabilidad.
             </p>
             
-            <!-- Botones de Acceso Rápido adaptable -->
+            <!-- Botones de Acceso Rápido -->
             <div class="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-4xl mx-auto text-xs sm:text-sm font-semibold">
                 <a href="#quienes-somos" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="users" class="w-5 h-5"></i> Quiénes Somos
@@ -72,8 +90,8 @@
                 <a href="#grupos" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="heart-handshake" class="w-5 h-5"></i> Grupos
                 </a>
-                <a href="#i-igual-i" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
-                    <i data-lucide="activity" class="w-5 h-5"></i> I = I
+                <a href="#vih" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
+                    <i data-lucide="activity" class="w-5 h-5"></i> VIH
                 </a>
                 <a href="#actividades" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="calendar" class="w-5 h-5"></i> Actividades
@@ -155,12 +173,12 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: I = I -->
-    <section id="i-igual-i" class="py-20 px-4 max-w-5xl mx-auto">
+    <!-- SECCIÓN: VIH (I = I) -->
+    <section id="vih" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Evidencia científica</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">I = I (Indetectable = Intransmisible)</h2>
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">VIH: I = I (Indetectable = Intransmisible)</h2>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 items-center">
@@ -196,6 +214,60 @@
                         Información basada en evidencia
                     </span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: INFECCIONES DE TRANSMISIÓN SEXUAL -->
+    <section id="its" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Infecciones de Transmisión Sexual (ITS)</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    Las Infecciones de Transmisión Sexual (ITS) son infecciones que se transmiten principalmente a través de las relaciones sexuales sin protección. Muchas de ellas pueden no presentar síntomas durante mucho tiempo, por lo que el testeo periódico es fundamental.
+                </p>
+                <p>
+                    El diagnóstico temprano permite acceder a tratamientos oportunos y eficaces, previniendo complicaciones y cuidando nuestra salud sexual de manera integral.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: POBLACIÓN TRANS -->
+    <section id="poblacion-trans" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Población Trans</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    Trabajamos activamente por la inclusión, el respeto y la garantía de derechos integrales para las personas travestis, transexuales y transgénero.
+                </p>
+                <p>
+                    El acceso a la salud integral, el respeto al trato digno y la Ley de Identidad de Género son pilares fundamentales para construir una sociedad justa y libre de violencias. Brindamos asesoramiento, contención y redes comunitarias de apoyo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: ESI (Educación Sexual Integral) -->
+    <section id="esi" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">ESI (Educación Sexual Integral)</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    La Educación Sexual Integral (ESI) articula aspectos biológicos, psicológicos, sociales, afectivos y éticos. Es una herramienta clave para la promoción de la salud, el ejercicio de derechos y la prevención de la violencia.
+                </p>
+                <p>
+                    Promovemos la ESI como un derecho fundamental en todos los ámbitos de la sociedad, fomentando el respeto por la diversidad y la construcción de vínculos saludables y libres de prejuicios.
+                </p>
             </div>
         </div>
     </section>

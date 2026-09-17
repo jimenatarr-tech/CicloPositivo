@@ -6,27 +6,37 @@
     <title>Asociación Ciclo Positivo | Comunidad y Derechos</title>
     <!-- Favicon con tu logo -->
     <link rel="icon" href="ciclo.jpg" type="image/jpeg">
+    <!-- Google Fonts: Montserrat (Tipografía geométrica idéntica al estilo de las placas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Aplicamos la fuente Montserrat a toda la web */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
     <!-- HEADER / NAVEGACIÓN -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-xs">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight flex items-center gap-3" style="color: #2e1044;">
+            <a href="#" class="text-lg md:text-xl font-extrabold tracking-tight flex items-center gap-3" style="color: #2e1044;">
                 <img src="ciclo.jpg" alt="Logo Ciclo Positivo" class="w-10 h-10 object-contain rounded-full shadow-xs">
                 Ciclo Positivo
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <nav class="hidden md:flex items-center gap-8 text-sm font-bold text-slate-700">
                 <a href="#quienes-somos" class="hover:text-[#e30381] transition-colors">Quiénes Somos</a>
                 <a href="#grupos" class="hover:text-[#e30381] transition-colors">Grupos de Encuentro</a>
                 <a href="#actividades" class="hover:text-[#e30381] transition-colors">Actividades</a>
                 <a href="#datos-utiles" class="hover:text-[#e30381] transition-colors">Datos Útiles</a>
                 <a href="#galeria" class="hover:text-[#e30381] transition-colors">Galería</a>
-                <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white px-4 py-2 rounded-full transition-all flex items-center gap-2 shadow-sm hover:opacity-90" style="background-color: #e30381;">
+                <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white px-5 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm hover:opacity-90 font-bold" style="background-color: #e30381;">
                     <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
                 </a>
             </nav>
@@ -37,22 +47,23 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative py-20 md:py-32 text-white overflow-hidden" style="background: linear-gradient(to bottom, #2e1044, #83055e);">
+    <section class="relative py-24 md:py-36 text-white overflow-hidden" style="background: linear-gradient(to bottom, #2e1044, #83055e);">
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <span class="inline-block text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 border border-white/20 bg-white/10 text-white">
+            <!-- Etiqueta con el nuevo color turquesa institucional -->
+            <span class="inline-block text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 text-slate-900 shadow-sm" style="background-color: #41b8bf;">
                 Asociación Civil Ciclo Positivo
             </span>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight uppercase">
                 Promoción de derechos, salud pública y comunidad.
             </h1>
-            <p class="text-lg md:text-xl text-purple-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-base md:text-xl text-purple-100 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
                 Somos un colectivo de activistas, profesionales y referentes que trabajamos por el acompañamiento integral a poblaciones diversas y en situación de vulnerabilidad.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#grupos" class="font-semibold px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 bg-white text-[#2e1044] hover:bg-slate-100">
-                    Sumate a los grupos <i data-lucide="arrow-right" class="w-4 h-4" style="color: #e30381;"></i>
+                <a href="#grupos" class="font-extrabold px-8 py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 text-slate-900 hover:opacity-90" style="background-color: #41b8bf;">
+                    Sumate a los grupos <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
-                <a href="#datos-utiles" class="text-white border font-semibold px-8 py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 hover:bg-white/10 border-white/30" style="background-color: rgba(131, 5, 94, 0.4);">
+                <a href="#datos-utiles" class="text-white border font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 hover:bg-white/10 border-white/30" style="background-color: rgba(131, 5, 94, 0.4);">
                     Datos útiles VIH
                 </a>
             </div>
@@ -63,12 +74,12 @@
     <section id="quienes-somos" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white p-8 md:p-12 rounded-3xl border border-slate-100 shadow-sm grid md:grid-cols-2 gap-8 items-center">
             <div>
-                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md mb-4 inline-block" style="background-color: #fdf2f8; color: #e30381;">Quiénes Somos</span>
-                <h2 class="text-3xl font-bold tracking-tight mb-4" style="color: #2e1044;">Compromiso con la equidad y la salud</h2>
-                <p class="text-slate-600 mb-4 leading-relaxed text-sm md:text-base">
+                <span class="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-md mb-4 inline-block text-slate-900" style="background-color: #41b8bf;">Quiénes Somos</span>
+                <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-4 uppercase" style="color: #2e1044;">Compromiso con la equidad y la salud</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed text-sm md:text-base font-medium">
                     Somos un colectivo compuesto por activistas, militantes, estudiantes, profesionales de la salud y las ciencias sociales. Nos reunimos para brindar acompañamiento en asuntos jurídicos, psicosociales y asistencia integral.
                 </p>
-                <p class="text-slate-600 mb-6 leading-relaxed text-sm md:text-base">
+                <p class="text-slate-600 mb-6 leading-relaxed text-sm md:text-base font-medium">
                     Afirmamos nuestro compromiso ineludible con la salud pública y la información científica de calidad, promoviendo el estudio y la investigación de la diversidad en todas sus expresiones.
                 </p>
             </div>
@@ -82,20 +93,20 @@
     <section id="grupos" class="py-20 bg-slate-100/70 border-y border-slate-200/60 px-4">
         <div class="max-w-5xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight mb-4" style="color: #2e1044;">Grupos de Encuentro</h2>
-                <p class="text-slate-600">Espacios seguros, confidenciales y de escucha mutua entre pares.</p>
+                <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-4 uppercase" style="color: #2e1044;">Grupos de Encuentro</h2>
+                <p class="text-slate-600 font-medium">Espacios seguros, confidenciales y de escucha mutua entre pares.</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 md:p-12 rounded-3xl border border-slate-100 shadow-sm">
                 <div>
-                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-6" style="background-color: #fdf2f8; color: #e30381;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center mb-6 font-bold text-slate-900" style="background-color: #41b8bf;">
                         <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" style="color: #2e1044;">¿Qué son y cómo funcionan?</h3>
-                    <p class="text-slate-600 mb-6 leading-relaxed">
+                    <h3 class="text-xl font-black mb-4 uppercase" style="color: #2e1044;">¿Qué son y cómo funcionan?</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed font-medium">
                         Reuniones periódicas pensadas para conversar sobre vivencias cotidianas, tratamientos y afectos. Un lugar donde compartir sin juicios y encontrarnos con otros que transitan realidades similares.
                     </p>
-                    <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                    <ul class="space-y-3 text-sm text-slate-700 mb-8 font-semibold">
                         <li class="flex items-center gap-3">
                             <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0" style="color: #e30381;"></i> 100% confidenciales y libres de estigma.
                         </li>
@@ -106,15 +117,15 @@
                             <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0" style="color: #e30381;"></i> Modalidad presencial y virtual.
                         </li>
                     </ul>
-                    <a href="https://instagram.com/ciclo.positivo" target="_blank" class="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
+                    <a href="https://instagram.com/ciclo.positivo" target="_blank" class="inline-flex items-center gap-2 text-white font-black px-6 py-3 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
                         <i data-lucide="link" class="w-4 h-4"></i> Link para sumarte al próximo grupo
                     </a>
                 </div>
                 <div class="rounded-2xl p-8 border text-center flex flex-col justify-center items-center min-h-[280px]" style="background-color: #fdf2f8; border-color: #fbcfe8;">
                     <i data-lucide="message-circle-heart" class="w-16 h-16 mb-4" style="color: #e30381;"></i>
-                    <h4 class="font-bold text-lg mb-2" style="color: #2e1044;">¿Querés participar?</h4>
-                    <p class="text-sm mb-6 max-w-xs text-slate-600">Escribinos por mensaje directo a nuestro Instagram para recibir los datos de acceso o coordinar.</p>
-                    <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors hover:opacity-90" style="background-color: #2e1044;">
+                    <h4 class="font-black text-lg mb-2 uppercase" style="color: #2e1044;">¿Querés participar?</h4>
+                    <p class="text-sm mb-6 max-w-xs text-slate-600 font-medium">Escribinos por mensaje directo a nuestro Instagram para recibir los datos de acceso o coordinar.</p>
+                    <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors hover:opacity-90" style="background-color: #2e1044;">
                         Enviar Mensaje
                     </a>
                 </div>
@@ -125,48 +136,48 @@
     <!-- OTRAS ACTIVIDADES -->
     <section id="actividades" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold tracking-tight mb-4" style="color: #2e1044;">Otras Actividades</h2>
-            <p class="text-slate-600">Charlas, talleres, conversatorios y campañas que impulsamos desde la Asociación.</p>
+            <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-4 uppercase" style="color: #2e1044;">Otras Actividades</h2>
+            <p class="text-slate-600 font-medium">Charlas, talleres, conversatorios y campañas que impulsamos desde la Asociación.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background-color: #fdf2f8; color: #e30381;">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-slate-900 font-bold" style="background-color: #41b8bf;">
                         <i data-lucide="mic" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Charlas y Talleres</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    <h3 class="font-black text-lg text-slate-900 mb-2 uppercase">Charlas y Talleres</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
                         Espacios abiertos de formación e intercambio sobre salud sexual, derechos y derribo de mitos.
                     </p>
                 </div>
-                <span class="text-xs font-semibold py-1 px-3 rounded-md w-max" style="background-color: #fdf2f8; color: #e30381;">Actividad recurrente</span>
+                <span class="text-xs font-bold py-1 px-3 rounded-md w-max text-slate-900" style="background-color: #41b8bf;">Actividad recurrente</span>
             </div>
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background-color: #fdf2f8; color: #e30381;">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-slate-900 font-bold" style="background-color: #41b8bf;">
                         <i data-lucide="calendar" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Encuentros Abiertos</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    <h3 class="font-black text-lg text-slate-900 mb-2 uppercase">Encuentros Abiertos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
                         Jornadas recreativas y culturales para conectar con la comunidad en el espacio público.
                     </p>
                 </div>
-                <span class="text-xs font-semibold py-1 px-3 rounded-md w-max" style="background-color: #fdf2f8; color: #e30381;">Próximamente</span>
+                <span class="text-xs font-bold py-1 px-3 rounded-md w-max text-slate-900" style="background-color: #41b8bf;">Próximamente</span>
             </div>
 
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
                 <div>
-                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4" style="background-color: #fdf2f8; color: #e30381;">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-slate-900 font-bold" style="background-color: #41b8bf;">
                         <i data-lucide="megaphone" class="w-5 h-5"></i>
                     </div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Campañas en Redes</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                    <h3 class="font-black text-lg text-slate-900 mb-2 uppercase">Campañas en Redes</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
                         Producción de contenido informativo y placas de concientización para compartir activamente.
                     </p>
                 </div>
-                <span class="text-xs font-semibold py-1 px-3 rounded-md w-max" style="background-color: #fdf2f8; color: #e30381;">Permanente</span>
+                <span class="text-xs font-bold py-1 px-3 rounded-md w-max text-slate-900" style="background-color: #41b8bf;">Permanente</span>
             </div>
         </div>
     </section>
@@ -175,53 +186,53 @@
     <section id="datos-utiles" class="py-20 bg-slate-100/70 border-y border-slate-200/60 px-4">
         <div class="max-w-5xl mx-auto">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight mb-4" style="color: #2e1044;">Datos Útiles VIH</h2>
-                <p class="text-slate-600">Herramientas esenciales, conceptos clave y derechos que nos amparan.</p>
+                <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-4 uppercase" style="color: #2e1044;">Datos Útiles VIH</h2>
+                <p class="text-slate-600 font-medium">Herramientas esenciales, conceptos clave y derechos que nos amparan.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="p-2 rounded-xl" style="background-color: #fdf2f8; color: #e30381;"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900">Derechos y Leyes</h3>
+                        <div class="p-2 rounded-xl text-slate-900 font-bold" style="background-color: #41b8bf;"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                        <h3 class="text-xl font-black text-slate-900 uppercase">Derechos y Leyes</h3>
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
                         La legislación actual protege la confidencialidad de tu diagnóstico. No es obligatorio presentar test de VIH para ingresos laborales ni estudios médicos pre-ocupacionales discriminatorios.
                     </p>
-                    <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Confidencialidad garantizada</span>
+                    <span class="text-xs font-bold text-slate-800 px-3 py-1 rounded-full" style="background-color: #41b8bf;">Confidencialidad garantizada</span>
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="p-2 rounded-xl" style="background-color: #fdf2f8; color: #e30381;"><i data-lucide="activity" class="w-6 h-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900">I = I (Indetectable = Intransmisible)</h3>
+                        <div class="p-2 rounded-xl text-slate-900 font-bold" style="background-color: #41b8bf;"><i data-lucide="activity" class="w-6 h-6"></i></div>
+                        <h3 class="text-xl font-black text-slate-900 uppercase">I = I (Indetectable = Intransmisible)</h3>
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
                         Tomar la medicación antirretroviral de forma constante reduce la carga viral en sangre a niveles indetectables. Esto significa que **no se transmite el virus** por vía sexual.
                     </p>
-                    <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Evidencia científica</span>
+                    <span class="text-xs font-bold text-slate-800 px-3 py-1 rounded-full" style="background-color: #41b8bf;">Evidencia científica</span>
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="p-2 rounded-xl" style="background-color: #fdf2f8; color: #e30381;"><i data-lucide="hospital" class="w-6 h-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900">Tratamiento y Medicación</h3>
+                        <div class="p-2 rounded-xl text-slate-900 font-bold" style="background-color: #41b8bf;"><i data-lucide="hospital" class="w-6 h-6"></i></div>
+                        <h3 class="text-xl font-black text-slate-900 uppercase">Tratamiento y Medicación</h3>
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
                         El acceso a la medicación antirretroviral es un derecho garantizado. Las obras sociales, prepagas y el sistema público de salud deben proveerla de manera gratuita.
                     </p>
-                    <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Acceso universal</span>
+                    <span class="text-xs font-bold text-slate-800 px-3 py-1 rounded-full" style="background-color: #41b8bf;">Acceso universal</span>
                 </div>
 
                 <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="p-2 rounded-xl" style="background-color: #fdf2f8; color: #e30381;"><i data-lucide="phone-call" class="w-6 h-6"></i></div>
-                        <h3 class="text-xl font-bold text-slate-900">Líneas de Asesoramiento</h3>
+                        <div class="p-2 rounded-xl text-slate-900 font-bold" style="background-color: #41b8bf;"><i data-lucide="phone-call" class="w-6 h-6"></i></div>
+                        <h3 class="text-xl font-black text-slate-900 uppercase">Líneas de Asesoramiento</h3>
                     </div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4 font-medium">
                         Si tenés dudas sobre testeos, acceso a derechos o querés orientación profesional, existen líneas de atención oficiales y gratuitas en todo el país.
                     </p>
-                    <span class="text-xs font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full">Orientación y consultas</span>
+                    <span class="text-xs font-bold text-slate-800 px-3 py-1 rounded-full" style="background-color: #41b8bf;">Orientación y consultas</span>
                 </div>
             </div>
         </div>
@@ -230,8 +241,8 @@
     <!-- GALERÍA DE FOTOS -->
     <section id="galeria" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold tracking-tight mb-4" style="color: #2e1044;">Galería</h2>
-            <p class="text-slate-600">Momentos compartidos y postales de nuestros encuentros.</p>
+            <h2 class="text-2xl md:text-3xl font-black tracking-tight mb-4 uppercase" style="color: #2e1044;">Galería</h2>
+            <p class="text-slate-600 font-medium">Momentos compartidos y postales de nuestros encuentros.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -241,24 +252,24 @@
             <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-center p-8 text-center" style="background-color: #fdf2f8;">
                 <div>
                     <i data-lucide="heart" class="w-10 h-10 mx-auto mb-3" style="color: #e30381;"></i>
-                    <h4 class="font-bold text-lg mb-1" style="color: #2e1044;">Comunidad en movimiento</h4>
-                    <p class="text-sm text-slate-600">Construyendo redes y acompañamiento todos los días.</p>
+                    <h4 class="font-black text-lg mb-1 uppercase" style="color: #2e1044;">Comunidad en movimiento</h4>
+                    <p class="text-sm text-slate-600 font-medium">Construyendo redes y acompañamiento todos los días.</p>
                 </div>
             </div>
         </div>
-        <p class="text-center text-xs text-slate-500 mt-6">Podés ver más imágenes y contenido diario en nuestro perfil de Instagram.</p>
+        <p class="text-center text-xs text-slate-500 mt-6 font-medium">Podés ver más imágenes y contenido diario en nuestro perfil de Instagram.</p>
     </section>
 
     <!-- FOOTER -->
     <footer class="text-white py-12" style="background-color: #2e1044;">
         <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
-                <a href="#" class="text-xl font-bold tracking-tight flex items-center justify-center md:justify-start gap-3 mb-2 text-white">
+                <a href="#" class="text-xl font-black tracking-tight flex items-center justify-center md:justify-start gap-3 mb-2 text-white">
                     <img src="ciclo.jpg" alt="Logo" class="w-8 h-8 object-contain rounded-full bg-white/10 p-0.5">
                     Asociación Ciclo Positivo
                 </a>
-                <p class="text-purple-200 text-sm">Comunidad, información y redes de apoyo.</p>
-                <p class="text-purple-300 text-xs mt-1">Contacto: info.ciclopositivo@gmail.com</p>
+                <p class="text-purple-200 text-sm font-medium">Comunidad, información y redes de apoyo.</p>
+                <p class="text-purple-300 text-xs mt-1 font-medium">Contacto: info.ciclopositivo@gmail.com</p>
             </div>
             <div class="flex items-center gap-4">
                 <a href="https://instagram.com/ciclo.positivo" target="_blank" class="w-10 h-10 hover:opacity-90 transition-opacity rounded-full flex items-center justify-center text-white shadow-sm" style="background-color: #e30381;">
@@ -266,7 +277,7 @@
                 </a>
             </div>
         </div>
-        <div class="max-w-5xl mx-auto px-4 mt-8 pt-6 border-t border-purple-900/50 text-center text-xs text-purple-300">
+        <div class="max-w-5xl mx-auto px-4 mt-8 pt-6 border-t border-purple-900/50 text-center text-xs text-purple-300 font-medium">
             © 2026 Asociación Ciclo Positivo. Todos los derechos reservados.
         </div>
     </footer>

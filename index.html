@@ -35,6 +35,7 @@
         .no-scrollbar {
             -ms-overflow-style: none;
             scrollbar-width: none;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -157,27 +158,62 @@
                 </a>
             </div>
 
-            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel Deslizable Horizontal) -->
+            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel Deslizable Horizontal Automático) -->
             <div class="max-w-5xl mx-auto text-left mt-8">
                 <div class="flex items-center justify-between mb-4 px-2">
                     <h3 class="text-lg md:text-xl font-bold tracking-tight uppercase flex items-center gap-2 text-white">
                         <span class="w-3 h-3 rounded-full animate-pulse inline-block" style="background-color: #e30381;"></span> 
                         ¿En qué anda Ciclo?
                     </h3>
-                    <span class="text-xs text-purple-200 font-medium hidden sm:inline-block">Deslizá para ver más ➔</span>
+                    <span class="text-xs text-purple-200 font-medium hidden sm:inline-block">Deslizamiento automático ➔</span>
                 </div>
 
                 <!-- Contenedor del Carrusel -->
-                <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 pt-1 px-1 snap-x">
+                <div id="carrusel-ciclo" class="flex gap-4 overflow-x-auto no-scrollbar pb-4 pt-1 px-1 snap-x">
                     
-                    <!-- Tarjeta 1: Brasil (Usa IMG_1879.jpeg) -->
-                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
+                    <!-- Tarjeta 1: Adhesión a la Ley de VIH en PBA (Actualizada 16/9/26) -->
+                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
-                            <div class="h-40 overflow-hidden bg-purple-950">
+                            <div class="h-44 overflow-hidden bg-purple-950">
+                                <img src="adhesion.png" alt="Adhesión a la Ley de VIH en PBA" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900" style="background-color: #41b8bf;">Incidencia Política</span>
+                                    <span class="text-[11px] text-purple-200 font-medium">📅 16/9/2026</span>
+                                </div>
+                                <h4 class="font-bold text-base mb-2 text-white">Adhesión a la Ley de VIH en PBA</h4>
+                                <p class="text-xs text-purple-100 leading-relaxed font-normal space-y-2">
+                                    El proyecto <strong>E-439/24-25</strong>, que adhiere a la Ley Nacional 27.675, ya tiene media sanción del Senado.<br><br>
+                                    ➡️ <strong>Ahora falta Diputados.</strong> Está pendiente en comisiones de Salud, Presupuesto y Legislación General. Si no se trata antes del cierre del período legislativo 2026, pierde estado parlamentario.<br><br>
+                                    No es sólo una adhesión: incorpora herramientas concretas para garantizar derechos en la Provincia:<br>
+                                    ✅ Acceso a tratamientos<br>
+                                    ✅ Vivienda y empleo<br>
+                                    ✅ Régimen jubilatorio<br>
+                                    ✅ Apoyo para tuberculosis<br>
+                                    ✅ Protección para niñeces y adolescencias<br><br>
+                                    La Ley Nacional 27.675 está vigente desde 2022. La adhesión bonaerense tiene que ser ley.<br><br>
+                                    📣 <strong>¡Exigimos tratamiento y aprobación!</strong><br>
+                                    #NoHayMásTiempo
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
+                            <span>🏛️ Provincia de Bs. As.</span>
+                            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Ver más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Brasil (Usa IMG_1879.jpeg) -->
+                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
+                        <div>
+                            <div class="h-44 overflow-hidden bg-purple-950">
                                 <img src="IMG_1879.jpeg" alt="Conferencia en Brasil" class="w-full h-full object-cover">
                             </div>
                             <div class="p-5">
-                                <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-2 inline-block" style="background-color: #41b8bf;">Internacional</span>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900" style="background-color: #41b8bf;">Internacional</span>
+                                </div>
                                 <h4 class="font-bold text-base mb-2 text-white">Conferencia Mundial en Brasil</h4>
                                 <p class="text-xs text-purple-100 leading-relaxed font-normal">
                                     Estuvimos presentes en la Conferencia Internacional de VIH/SIDA en Brasil y en el Simposio, llevando la voz del activismo federal y basado en evidencia.
@@ -190,28 +226,8 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2: Ley de VIH en PBA (Usa IMG_1880.jpeg) -->
-                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
-                        <div>
-                            <div class="h-40 overflow-hidden bg-purple-950">
-                                <img src="IMG_1880.jpeg" alt="Ley de VIH en PBA" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-5">
-                                <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-2 inline-block" style="background-color: #41b8bf;">Incidencia Política</span>
-                                <h4 class="font-bold text-base mb-2 text-white">Adhesión a la Ley de VIH en PBA</h4>
-                                <p class="text-xs text-purple-100 leading-relaxed font-normal">
-                                    Estamos impulsando y difundiendo la campaña para que la Provincia de Buenos Aires adhiera formalmente a la nueva Ley Nacional de VIH, ITS y Hepatitis.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="px-5 pb-5 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
-                            <span>🏛️ Provincia de Bs. As.</span>
-                            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Ver más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
-                        </div>
-                    </div>
-
                     <!-- Tarjeta 3: Folclore -->
-                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
+                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-3 inline-block" style="background-color: #41b8bf;">Cultura & Comunidad</span>
                             <h4 class="font-bold text-base mb-2 text-white">¡Nuevas clases de Folclore!</h4>
@@ -226,7 +242,7 @@
                     </div>
 
                     <!-- Tarjeta 4: Grupos -->
-                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
+                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-3 inline-block" style="background-color: #41b8bf;">Acompañamiento</span>
                             <h4 class="font-bold text-base mb-2 text-white">Grupos de Encuentro</h4>
@@ -596,7 +612,7 @@
         </div>
     </footer>
 
-    <!-- Script para inicializar íconos y menús móviles interactivos -->
+    <!-- Script para inicializar íconos, menús y carrusel automático -->
     <script>
         lucide.createIcons();
 
@@ -620,6 +636,30 @@
         submenuActBtn.addEventListener('click', () => {
             submenuActContent.classList.toggle('hidden');
         });
+
+        // Autoplay para el carrusel "¿En qué anda Ciclo?"
+        const carrusel = document.getElementById('carrusel-ciclo');
+        let scrollInterval;
+
+        function iniciarCarrusel() {
+            scrollInterval = setInterval(() => {
+                if (!carrusel) return;
+                // Si llega al final, vuelve al principio
+                if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
+                    carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    // Avanza el ancho de una tarjeta aproximada (350px)
+                    carrusel.scrollBy({ left: 360, behavior: 'smooth' });
+                }
+            }, 3500); // Cambia de tarjeta cada 3.5 segundos
+        }
+
+        // Iniciar al cargar la página
+        iniciarCarrusel();
+
+        // Pausar el autoplay cuando el usuario ponga el mouse encima
+        carrusel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
+        carrusel.addEventListener('mouseleave', () => iniciarCarrusel());
     </script>
 </body>
 </html>

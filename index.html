@@ -182,8 +182,8 @@
                     <!-- Tarjeta 1: Adhesión a la Ley de VIH en PBA (Actualizada 16/9/26) -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
-                            <div class="h-44 overflow-hidden bg-[#120421] flex items-center justify-center">
-                                <img src="adhesion.png" alt="Adhesión a la Ley de VIH en PBA" class="w-full h-full object-contain object-top">
+                            <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
+                                <img src="adhesion.png" alt="Adhesión a la Ley de VIH en PBA" class="w-full h-full object-cover">
                             </div>
                             <div class="p-5">
                                 <div class="flex items-center justify-between mb-2">
@@ -695,10 +695,8 @@
         // Autoplay del carrusel cada 3.5 segundos
         let autoplay = setInterval(() => {
             if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
-                // Si llega al final, vuelve al principio de forma suave
                 carrusel.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                // Si no, avanza una tarjeta/porción
                 carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
             }
         }, 3500);

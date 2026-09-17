@@ -45,7 +45,7 @@
                 <a href="#quienes-somos" class="hover:text-[#41b8bf] transition-colors">Quiénes Somos</a>
                 <a href="#grupos" class="hover:text-[#41b8bf] transition-colors">Grupos de Encuentro</a>
                 
-                <!-- MENÚ DESPLEGABLE DESKTOP -->
+                <!-- MENÚ DESPLEGABLE: INFORMACIÓN -->
                 <div class="relative dropdown group py-4">
                     <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
                         Información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
@@ -58,7 +58,19 @@
                     </div>
                 </div>
 
-                <a href="#actividades" class="hover:text-[#41b8bf] transition-colors">Actividades</a>
+                <!-- MENÚ DESPLEGABLE: ACTIVIDADES -->
+                <div class="relative dropdown group py-4">
+                    <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
+                        Actividades <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <div class="dropdown-menu hidden absolute top-full left-0 w-56 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
+                        <a href="#folclore" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Clases de Folclore</a>
+                        <a href="#charlas" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Charlas y Talleres</a>
+                        <a href="#encuentros" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Encuentros Abiertos</a>
+                        <a href="#campañas" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Campañas en Redes</a>
+                    </div>
+                </div>
+
                 <a href="#datos-utiles" class="hover:text-[#41b8bf] transition-colors">Datos Útiles</a>
                 <a href="#galeria" class="hover:text-[#41b8bf] transition-colors">Galería</a>
                 <a href="https://instagram.com/ciclo.positivo" target="_blank" class="text-white px-5 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-sm hover:opacity-90 font-medium" style="background-color: #e30381;">
@@ -79,10 +91,10 @@
             
             <!-- Submenú Información Celular -->
             <div class="py-2">
-                <button id="submenu-btn" class="flex items-center justify-between w-full hover:text-[#41b8bf]">
+                <button id="submenu-info-btn" class="flex items-center justify-between w-full hover:text-[#41b8bf]">
                     <span>Información</span> <i data-lucide="chevron-down" class="w-4 h-4"></i>
                 </button>
-                <div id="submenu-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
+                <div id="submenu-info-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
                     <a href="#vih" class="block py-1 hover:text-[#41b8bf]">▪ VIH</a>
                     <a href="#its" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
                     <a href="#poblacion-trans" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
@@ -90,7 +102,19 @@
                 </div>
             </div>
 
-            <a href="#actividades" class="block py-2 hover:text-[#41b8bf]">Actividades</a>
+            <!-- Submenú Actividades Celular -->
+            <div class="py-2">
+                <button id="submenu-act-btn" class="flex items-center justify-between w-full hover:text-[#41b8bf]">
+                    <span>Actividades</span> <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+                <div id="submenu-act-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
+                    <a href="#folclore" class="block py-1 hover:text-[#41b8bf]">▪ Clases de Folclore</a>
+                    <a href="#charlas" class="block py-1 hover:text-[#41b8bf]">▪ Charlas y Talleres</a>
+                    <a href="#encuentros" class="block py-1 hover:text-[#41b8bf]">▪ Encuentros Abiertos</a>
+                    <a href="#campañas" class="block py-1 hover:text-[#41b8bf]">▪ Campañas en Redes</a>
+                </div>
+            </div>
+
             <a href="#datos-utiles" class="block py-2 hover:text-[#41b8bf]">Datos Útiles</a>
             <a href="#galeria" class="block py-2 hover:text-[#41b8bf]">Galería</a>
             <a href="https://instagram.com/ciclo.positivo" target="_blank" class="block text-center text-white py-2.5 rounded-full font-medium mt-2" style="background-color: #e30381;">
@@ -112,7 +136,7 @@
                 Somos un colectivo de activistas, profesionales y referentes que trabajamos por el acompañamiento integral a poblaciones diversas y en situación de vulnerabilidad.
             </p>
             
-            <!-- Botones de Acceso Rápido -->
+            <!-- Botones de Acceso Rápido actualizados -->
             <div class="grid grid-cols-3 md:grid-cols-6 gap-3 max-w-4xl mx-auto text-xs sm:text-sm font-semibold">
                 <a href="#quienes-somos" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="users" class="w-5 h-5"></i> Quiénes Somos
@@ -123,8 +147,8 @@
                 <a href="#vih" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="activity" class="w-5 h-5"></i> VIH
                 </a>
-                <a href="#actividades" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
-                    <i data-lucide="calendar" class="w-5 h-5"></i> Actividades
+                <a href="#folclore" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
+                    <i data-lucide="calendar" class="w-5 h-5"></i> Folclore
                 </a>
                 <a href="#datos-utiles" class="p-3 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-1.5" style="background-color: #41b8bf;">
                     <i data-lucide="shield-check" class="w-5 h-5"></i> Datos Útiles
@@ -302,12 +326,12 @@
         </div>
     </section>
 
-    <!-- OTRAS ACTIVIDADES (FOLCLORE) -->
-    <section id="actividades" class="py-20 px-4 max-w-4xl mx-auto">
+    <!-- SECCIÓN: CLASES DE FOLCLORE -->
+    <section id="folclore" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
                 <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Cultura y Comunidad</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Folclore en Ciclo Positivo</h2>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Clases de Folclore</h2>
             </div>
 
             <div class="max-w-3xl mx-auto mb-12">
@@ -332,45 +356,51 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Otras propuestas institucionales -->
-            <div class="border-t border-slate-100 pt-12">
-                <div class="text-center max-w-2xl mx-auto mb-8">
-                    <h3 class="text-xl md:text-2xl font-bold tracking-tight uppercase" style="color: #2e1044;">Otras propuestas institucionales</h3>
-                </div>
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-lg text-slate-900 mb-2 uppercase">Charlas y Talleres</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-                                Espacios abiertos de formación e intercambio sobre salud sexual, derechos y derribo de mitos.
-                            </p>
-                        </div>
-                        <span class="text-xs font-semibold py-1 px-3 rounded-md w-max text-slate-900" style="background-color: #41b8bf;">Actividad recurrente</span>
-                    </div>
-
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-lg text-slate-900 mb-2 uppercase">Encuentros Abiertos</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-                                Jornadas recreativas y culturales para conectar con la comunidad en el espacio público.
-                            </p>
-                        </div>
-                        <span class="text-xs font-semibold py-1 px-3 rounded-md w-max text-slate-900" style="background-color: #41b8bf;">Próximamente</span>
-                    </div>
-
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between">
-                        <div>
-                            <h4 class="font-bold text-lg text-slate-900 mb-2 uppercase">Campañas en Redes</h4>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
-                                Producción de contenido informativo y placas de concientización para compartir activamente.
-                            </p>
-                        </div>
-                        <span class="text-xs font-semibold py-1 px-3 rounded-md w-max text-slate-900" style="background-color: #41b8bf;">Permanente</span>
-                    </div>
-                </div>
+    <!-- SECCIÓN: CHARLAS Y TALLERES -->
+    <section id="charlas" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Actividades</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Charlas y Talleres</h2>
             </div>
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    Espacios abiertos de formación e intercambio sobre salud sexual, derechos y derribo de mitos. Diseñados para promover la participación activa y el acceso a información clara y basada en evidencia.
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- SECCIÓN: ENCUENTROS ABIERTOS -->
+    <section id="encuentros" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Actividades</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Encuentros Abiertos</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    Jornadas recreativas y culturales para conectar con la comunidad en el espacio público, fortaleciendo redes de apoyo y visibilizando nuestros derechos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CAMPAÑAS EN REDES -->
+    <section id="campañas" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Actividades</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Campañas en Redes</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
+                <p>
+                    Producción permanente de contenido informativo y placas de concientización para compartir activamente en nuestras plataformas digitales y llegar a más personas.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -472,7 +502,7 @@
         </div>
     </footer>
 
-    <!-- Script para inicializar íconos y menú móvil interactivo -->
+    <!-- Script para inicializar íconos y menús móviles interactivos -->
     <script>
         lucide.createIcons();
 
@@ -483,11 +513,18 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Control del submenú desplegable en celular
-        const submenuBtn = document.getElementById('submenu-btn');
-        const submenuContent = document.getElementById('submenu-content');
-        submenuBtn.addEventListener('click', () => {
-            submenuContent.classList.toggle('hidden');
+        // Control del submenú Información en celular
+        const submenuInfoBtn = document.getElementById('submenu-info-btn');
+        const submenuInfoContent = document.getElementById('submenu-info-content');
+        submenuInfoBtn.addEventListener('click', () => {
+            submenuInfoContent.classList.toggle('hidden');
+        });
+
+        // Control del submenú Actividades en celular
+        const submenuActBtn = document.getElementById('submenu-act-btn');
+        const submenuActContent = document.getElementById('submenu-act-content');
+        submenuActBtn.addEventListener('click', () => {
+            submenuActContent.classList.toggle('hidden');
         });
     </script>
 </body>

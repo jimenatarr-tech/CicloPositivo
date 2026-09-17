@@ -28,7 +28,7 @@
                 display: block;
             }
         }
-        /* Ocultar barra de desplazamiento en el carrusel pero permitir scroll */
+        /* Ocultar barra de desplazamiento pero permitir scroll */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -131,7 +131,7 @@
 
     <!-- HERO SECTION (ACCESOS RÁPIDOS Y CARRUSEL "EN QUÉ ANDA CICLO") -->
     <section class="relative py-14 md:py-24 text-white overflow-hidden text-center">
-        <div class="max-w-5xl mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
             <span class="inline-block text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 text-slate-900 shadow-sm" style="background-color: #41b8bf;">
                 Asociación Civil Ciclo Positivo
             </span>
@@ -158,21 +158,29 @@
                 </a>
             </div>
 
-            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel Deslizable Horizontal Automático) -->
-            <div class="max-w-5xl mx-auto text-left mt-8">
+            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel con Botones Manuales) -->
+            <div class="max-w-6xl mx-auto text-left mt-8">
                 <div class="flex items-center justify-between mb-4 px-2">
                     <h3 class="text-lg md:text-xl font-bold tracking-tight uppercase flex items-center gap-2 text-white">
                         <span class="w-3 h-3 rounded-full animate-pulse inline-block" style="background-color: #e30381;"></span> 
                         ¿En qué anda Ciclo?
                     </h3>
-                    <span class="text-xs text-purple-200 font-medium hidden sm:inline-block">Deslizamiento automático ➔</span>
+                    <!-- Botones de Navegación Manual -->
+                    <div class="flex items-center gap-2">
+                        <button id="prev-btn" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white p-2 rounded-full transition-colors focus:outline-none shadow-md">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button id="next-btn" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white p-2 rounded-full transition-colors focus:outline-none shadow-md">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Contenedor del Carrusel -->
-                <div id="carrusel-ciclo" class="flex gap-4 overflow-x-auto no-scrollbar pb-4 pt-1 px-1 snap-x">
+                <div id="carrusel-ciclo" class="grid grid-flow-col auto-cols-[100%] sm:auto-cols-[calc(50%-8px)] md:auto-cols-[calc(33.333%-11px)] gap-4 overflow-x-auto no-scrollbar pb-4 pt-1 px-1 snap-x">
                     
                     <!-- Tarjeta 1: Adhesión a la Ley de VIH en PBA (Actualizada 16/9/26) -->
-                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950">
                                 <img src="adhesion.png" alt="Adhesión a la Ley de VIH en PBA" class="w-full h-full object-cover">
@@ -185,27 +193,18 @@
                                 <h4 class="font-bold text-base mb-2 text-white">Adhesión a la Ley de VIH en PBA</h4>
                                 <p class="text-xs text-purple-100 leading-relaxed font-normal space-y-2">
                                     El proyecto <strong>E-439/24-25</strong>, que adhiere a la Ley Nacional 27.675, ya tiene media sanción del Senado.<br><br>
-                                    ➡️ <strong>Ahora falta Diputados.</strong> Está pendiente en comisiones de Salud, Presupuesto y Legislación General. Si no se trata antes del cierre del período legislativo 2026, pierde estado parlamentario.<br><br>
-                                    No es sólo una adhesión: incorpora herramientas concretas para garantizar derechos en la Provincia:<br>
-                                    ✅ Acceso a tratamientos<br>
-                                    ✅ Vivienda y empleo<br>
-                                    ✅ Régimen jubilatorio<br>
-                                    ✅ Apoyo para tuberculosis<br>
-                                    ✅ Protección para niñeces y adolescencias<br><br>
-                                    La Ley Nacional 27.675 está vigente desde 2022. La adhesión bonaerense tiene que ser ley.<br><br>
-                                    📣 <strong>¡Exigimos tratamiento y aprobación!</strong><br>
-                                    #NoHayMásTiempo
+                                    ➡️ <strong>Ahora falta Diputados.</strong> Está pendiente en comisiones de Salud, Presupuesto y Legislación General. Si no se trata antes del cierre del período legislativo 2026, pierde estado parlamentario.
                                 </p>
                             </div>
                         </div>
                         <div class="px-5 pb-5 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
                             <span>🏛️ Provincia de Bs. As.</span>
-                            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Ver más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                            <a href="https://www.instagram.com/p/DdWqoczFO5-/?img_index=1" target="_blank" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Ver más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
                         </div>
                     </div>
 
                     <!-- Tarjeta 2: Brasil (Usa IMG_1879.jpeg) -->
-                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950">
                                 <img src="IMG_1879.jpeg" alt="Conferencia en Brasil" class="w-full h-full object-cover">
@@ -227,7 +226,7 @@
                     </div>
 
                     <!-- Tarjeta 3: Folclore -->
-                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-3 inline-block" style="background-color: #41b8bf;">Cultura & Comunidad</span>
                             <h4 class="font-bold text-base mb-2 text-white">¡Nuevas clases de Folclore!</h4>
@@ -242,7 +241,7 @@
                     </div>
 
                     <!-- Tarjeta 4: Grupos -->
-                    <div class="min-w-[280px] sm:min-w-[340px] max-w-[340px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
                         <div>
                             <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-3 inline-block" style="background-color: #41b8bf;">Acompañamiento</span>
                             <h4 class="font-bold text-base mb-2 text-white">Grupos de Encuentro</h4>
@@ -612,7 +611,7 @@
         </div>
     </footer>
 
-    <!-- Script para inicializar íconos, menús y carrusel automático -->
+    <!-- Script para inicializar íconos, menús y navegación manual del carrusel -->
     <script>
         lucide.createIcons();
 
@@ -637,29 +636,19 @@
             submenuActContent.classList.toggle('hidden');
         });
 
-        // Autoplay para el carrusel "¿En qué anda Ciclo?"
+        // Navegación manual con flechas para el carrusel
         const carrusel = document.getElementById('carrusel-ciclo');
-        let scrollInterval;
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
 
-        function iniciarCarrusel() {
-            scrollInterval = setInterval(() => {
-                if (!carrusel) return;
-                // Si llega al final, vuelve al principio
-                if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
-                    carrusel.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    // Avanza el ancho de una tarjeta aproximada (350px)
-                    carrusel.scrollBy({ left: 360, behavior: 'smooth' });
-                }
-            }, 3500); // Cambia de tarjeta cada 3.5 segundos
-        }
+        nextBtn.addEventListener('click', () => {
+            // Se desplaza el equivalente a una tarjeta o un bloque
+            carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
+        });
 
-        // Iniciar al cargar la página
-        iniciarCarrusel();
-
-        // Pausar el autoplay cuando el usuario ponga el mouse encima
-        carrusel.addEventListener('mouseenter', () => clearInterval(scrollInterval));
-        carrusel.addEventListener('mouseleave', () => iniciarCarrusel());
+        prevBtn.addEventListener('click', () => {
+            carrusel.scrollBy({ left: -carrusel.clientWidth * 0.8, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>

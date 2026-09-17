@@ -182,8 +182,8 @@
                     <!-- Tarjeta 1: Adhesión a la Ley de VIH en PBA (Actualizada 16/9/26) -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
-                            <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
-                                <img src="adhesion.png" alt="Adhesión a la Ley de VIH en PBA" class="w-full h-full object-cover">
+                            <div class="h-44 overflow-hidden bg-[#120421] flex items-center justify-center">
+                                <img src="adhesion.png" alt="Adhesión a la Ley de VIH en PBA" class="w-full h-full object-contain object-top">
                             </div>
                             <div class="p-5">
                                 <div class="flex items-center justify-between mb-2">
@@ -703,7 +703,7 @@
             }
         }, 3500);
 
-        // Pausar el autoplay cuando el usuario pone el mouse encima para que pueda leer
+        // Pausar el autoplay cuando el mouse esté encima
         carrusel.addEventListener('mouseenter', () => clearInterval(autoplay));
         carrusel.addEventListener('mouseleave', () => {
             autoplay = setInterval(() => {

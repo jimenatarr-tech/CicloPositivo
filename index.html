@@ -28,6 +28,14 @@
                 display: block;
             }
         }
+        /* Ocultar barra de desplazamiento en el carrusel pero permitir scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -120,34 +128,121 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (ACCESOS RÁPIDOS SIMPLIFICADOS) -->
-    <section class="relative py-16 md:py-28 text-white overflow-hidden text-center">
+    <!-- HERO SECTION (ACCESOS RÁPIDOS Y CARRUSEL "EN QUÉ ANDA CICLO") -->
+    <section class="relative py-14 md:py-24 text-white overflow-hidden text-center">
         <div class="max-w-5xl mx-auto px-4 relative z-10">
-            <span class="inline-block text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-5 text-slate-900 shadow-sm" style="background-color: #41b8bf;">
+            <span class="inline-block text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 text-slate-900 shadow-sm" style="background-color: #41b8bf;">
                 Asociación Civil Ciclo Positivo
             </span>
-            <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight uppercase">
+            <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-5 leading-tight uppercase">
                 ACTIVISMO BASADO EN EVIDENCIA 🏳️‍🌈✊
             </h1>
-            <p class="text-sm md:text-xl text-purple-100 mb-10 max-w-3xl mx-auto leading-relaxed font-normal">
+            <p class="text-sm md:text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed font-normal">
                 Somos un colectivo de activistas, profesionales y referentes que trabajamos por el acompañamiento integral a poblaciones diversas y en situación de vulnerabilidad.
             </p>
             
             <!-- Los 4 Botones de Acceso Rápido Solicitados -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-sm font-semibold">
-                <a href="#quienes-somos" class="p-4 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
-                    <i data-lucide="users" class="w-6 h-6"></i> Quiénes somos
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto text-sm font-semibold mb-12">
+                <a href="#quienes-somos" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
+                    <i data-lucide="users" class="w-5 h-5"></i> Quiénes somos
                 </a>
-                <a href="#folclore" class="p-4 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
-                    <i data-lucide="calendar" class="w-6 h-6"></i> Actividades en ciclo
+                <a href="#folclore" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
+                    <i data-lucide="calendar" class="w-5 h-5"></i> Actividades en ciclo
                 </a>
-                <a href="#grupos" class="p-4 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
-                    <i data-lucide="heart-handshake" class="w-6 h-6"></i> Grupos de encuentro
+                <a href="#grupos" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
+                    <i data-lucide="heart-handshake" class="w-5 h-5"></i> Grupos de encuentro
                 </a>
-                <a href="#vih" class="p-4 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
-                    <i data-lucide="activity" class="w-6 h-6"></i> VIH
+                <a href="#vih" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
+                    <i data-lucide="activity" class="w-5 h-5"></i> VIH
                 </a>
             </div>
+
+            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel Deslizable Horizontal) -->
+            <div class="max-w-5xl mx-auto text-left mt-8">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight uppercase flex items-center gap-2 text-white">
+                        <span class="w-3 h-3 rounded-full animate-pulse inline-block" style="background-color: #e30381;"></span> 
+                        ¿En qué anda Ciclo?
+                    </h3>
+                    <span class="text-xs text-purple-200 font-medium hidden sm:inline-block">Deslizá para ver más ➔</span>
+                </div>
+
+                <!-- Contenedor del Carrusel -->
+                <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 pt-1 px-1 snap-x">
+                    
+                    <!-- Tarjeta 1: Brasil (Usa IMG_1879.jpeg) -->
+                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
+                        <div>
+                            <div class="h-40 overflow-hidden bg-purple-950">
+                                <img src="IMG_1879.jpeg" alt="Conferencia en Brasil" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-2 inline-block" style="background-color: #41b8bf;">Internacional</span>
+                                <h4 class="font-bold text-base mb-2 text-white">Conferencia Mundial en Brasil</h4>
+                                <p class="text-xs text-purple-100 leading-relaxed font-normal">
+                                    Estuvimos presentes en la Conferencia Internacional de VIH/SIDA en Brasil y en el Simposio, llevando la voz del activismo federal y basado en evidencia.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
+                            <span>📍 Brasil</span>
+                            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Ver más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Ley de VIH en PBA (Usa IMG_1880.jpeg) -->
+                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
+                        <div>
+                            <div class="h-40 overflow-hidden bg-purple-950">
+                                <img src="IMG_1880.jpeg" alt="Ley de VIH en PBA" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-2 inline-block" style="background-color: #41b8bf;">Incidencia Política</span>
+                                <h4 class="font-bold text-base mb-2 text-white">Adhesión a la Ley de VIH en PBA</h4>
+                                <p class="text-xs text-purple-100 leading-relaxed font-normal">
+                                    Estamos impulsando y difundiendo la campaña para que la Provincia de Buenos Aires adhiera formalmente a la nueva Ley Nacional de VIH, ITS y Hepatitis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-5 pb-5 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
+                            <span>🏛️ Provincia de Bs. As.</span>
+                            <a href="https://instagram.com/ciclo.positivo" target="_blank" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Ver más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Folclore -->
+                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-3 inline-block" style="background-color: #41b8bf;">Cultura & Comunidad</span>
+                            <h4 class="font-bold text-base mb-2 text-white">¡Nuevas clases de Folclore!</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">
+                                Abrimos un espacio de danza y cultura popular en nuestra sede CABA para bailar desde la diversidad, cuestionando roles tradicionales de género.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
+                            <span>💃 Miércoles en CABA</span>
+                            <a href="#folclore" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Conocé más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Grupos -->
+                    <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-lg snap-start flex flex-col justify-between">
+                        <div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider text-slate-900 mb-3 inline-block" style="background-color: #41b8bf;">Acompañamiento</span>
+                            <h4 class="font-bold text-base mb-2 text-white">Grupos de Encuentro</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">
+                                Espacios seguros, confidenciales y libres de estigma entre pares con y sin VIH en CABA y Ushuaia. ¡Inscripciones abiertas!
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-purple-200">
+                            <span>👥 Presenciales</span>
+                            <a href="#grupos" class="hover:text-[#41b8bf] font-medium flex items-center gap-1">Inscribite <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -487,7 +582,7 @@
                     <img src="ciclo.jpg" alt="Logo" class="w-8 h-8 object-contain rounded-full bg-white/10 p-0.5">
                     Asociación Ciclo Positivo
                 </a>
-                <p class="text-purple-200 text-sm font-normal">Comunidad, information y redes de apoyo.</p>
+                <p class="text-purple-200 text-sm font-normal">Comunidad, información y redes de apoyo.</p>
                 <p class="text-purple-300 text-xs mt-1 font-normal">Contacto: info.ciclopositivo@gmail.com</p>
             </div>
             <div class="flex items-center gap-4">

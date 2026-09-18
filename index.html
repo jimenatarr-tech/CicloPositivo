@@ -67,7 +67,7 @@
                     </div>
                 </div>
 
-                <!-- MENÚ DESPLEGABLE: ACTIVIDADES (Separadas) -->
+                <!-- MENÚ DESPLEGABLE: ACTIVIDADES -->
                 <div class="relative dropdown group py-4">
                     <button class="flex items-center gap-1 hover:text-[#41b8bf] transition-colors font-medium focus:outline-none">
                         Actividades <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
@@ -301,10 +301,11 @@
         </div>
     </section>
 
-    <!-- SECCIÓN QUIÉNES SOMOS -->
-    <section id="quienes-somos" class="py-20 px-4 max-w-4xl mx-auto">
+    <!-- SECCIÓN QUIÉNES SOMOS (CON LÍNEA DE TIEMPO HORIZONTAL) -->
+    <section id="quienes-somos" class="py-20 px-4 max-w-6xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl flex flex-col items-center text-center">
-            <div class="w-full max-w-2xl mb-6">
+            
+            <div class="w-full max-w-3xl mb-6">
                 <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Quiénes Somos</span>
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase leading-snug" style="color: #2e1044;">
                     Compromiso con la equidad<br>y la salud
@@ -315,7 +316,7 @@
                 <img src="equipo.png" alt="Colectivo Ciclo Positivo" class="w-full h-auto block object-cover">
             </div>
 
-            <div class="w-full max-w-3xl space-y-4 text-slate-600 text-sm md:text-base font-normal text-left md:text-center leading-relaxed">
+            <div class="w-full max-w-3xl space-y-4 text-slate-600 text-sm md:text-base font-normal text-left md:text-center leading-relaxed mb-12">
                 <p>
                     Somos un colectivo compuesto por activistas, militantes, estudiantes, profesionales de la salud y las ciencias sociales que se reúne para trabajar en pos de la promoción y la protección de los derechos, brindar acompañamiento en asuntos jurídicos, psicosociales y asistencia integral para las poblaciones diversas y en situación de vulnerabilidad.
                 </p>
@@ -323,6 +324,84 @@
                     Desde Asociación Ciclo Positivo afirmamos nuestro compromiso ineludible con la salud pública, con la información científica de calidad, con acciones que construyen equidad.
                 </p>
             </div>
+
+            <!-- LÍNEA DE TIEMPO HORIZONTAL DE NUESTRO RECORRIDO -->
+            <div class="w-full text-left mt-6 pt-8 border-t border-slate-200">
+                <h3 class="text-lg md:text-xl font-bold uppercase text-center mb-8" style="color: #2e1044;">
+                    Nuestro Recorrido Colectivo
+                </h3>
+
+                <!-- Contenedor del Carrusel Horizontal de Hitos -->
+                <div class="grid grid-flow-col auto-cols-[280px] sm:auto-cols-[320px] gap-6 overflow-x-auto no-scrollbar pb-6 pt-2 px-2 snap-x">
+                    
+                    <!-- Hito 1 -->
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
+                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
+                            Orígenes
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Creación del Colectivo</h4>
+                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
+                                Conformación de activistas y profesionales para dar respuesta comunitaria, acompañamiento integral y romper con el estigma sobre el VIH.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hito 2 -->
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
+                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
+                            Comunidad
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Grupos de Encuentro</h4>
+                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
+                                Apertura de espacios presenciales de escucha y contención en CABA y expansión a Ushuaia, Córdoba y Mendoza.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hito 3 -->
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
+                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
+                            Incidencia
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Ley Nacional de VIH</h4>
+                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
+                                Lucha histórica, movilización y participación activa junto a foros provinciales para la sanción de la Ley 27.675.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hito 4 -->
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
+                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
+                            Formación
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Cursos de Activismo</h4>
+                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
+                                Lanzamiento de ediciones enfocadas en formar nuevas generaciones en defensa de derechos y políticas públicas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Hito 5 -->
+                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
+                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
+                            Presente
+                        </div>
+                        <div class="mt-2">
+                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Sostenibilidad</h4>
+                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
+                                Modelo impulsado 100% por aportes individuales de la comunidad para garantizar autonomía y continuidad.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
 

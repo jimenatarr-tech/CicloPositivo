@@ -570,8 +570,24 @@
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
 
+            <!-- NUEVO: Barra de botones permanente para cambiar entre temas de Información sin volver al menú -->
+            <div class="flex flex-wrap gap-2 justify-center border-b border-slate-200 pb-5 mb-6 pt-2">
+                <button type="button" onclick="mostrarInformacion('vih')" id="btn-info-vih" class="info-nav-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                    <i data-lucide="ribbon" class="w-4 h-4 text-[#e30381]"></i> VIH
+                </button>
+                <button type="button" onclick="mostrarInformacion('its')" id="btn-info-its" class="info-nav-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                    <i data-lucide="flask-conical" class="w-4 h-4 text-[#e30381]"></i> ITS
+                </button>
+                <button type="button" onclick="mostrarInformacion('trans')" id="btn-info-trans" class="info-nav-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                    <i data-lucide="users" class="w-4 h-4 text-[#e30381]"></i> Población Trans
+                </button>
+                <button type="button" onclick="mostrarInformacion('esi')" id="btn-info-esi" class="info-nav-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                    <i data-lucide="book-open" class="w-4 h-4 text-[#e30381]"></i> ESI
+                </button>
+            </div>
+
             <!-- Panel VIH (Con sus pestañas científicas e ícono de lazo) -->
-            <div id="panel-vih" class="panel-info hidden space-y-6 pt-4">
+            <div id="panel-vih" class="panel-info hidden space-y-6 pt-2">
                 <div class="text-center max-w-xl mx-auto mb-4">
                     <span class="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block text-slate-900" style="background-color: #41b8bf;">Información Científica</span>
                     <h3 class="text-xl font-bold uppercase flex items-center justify-center gap-2" style="color: #2e1044;">
@@ -710,7 +726,7 @@
             </div>
 
             <!-- Panel ITS -->
-            <div id="panel-its" class="panel-info hidden space-y-3 pt-4">
+            <div id="panel-its" class="panel-info hidden space-y-3 pt-2">
                 <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                     <i data-lucide="flask-conical" class="w-6 h-6" style="color: #e30381;"></i> Infecciones de Transmisión Sexual (ITS)
                 </h3>
@@ -723,7 +739,7 @@
             </div>
 
             <!-- Panel Trans -->
-            <div id="panel-trans" class="panel-info hidden space-y-3 pt-4">
+            <div id="panel-trans" class="panel-info hidden space-y-3 pt-2">
                 <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                     <i data-lucide="users" class="w-6 h-6" style="color: #e30381;"></i> Población Trans
                 </h3>
@@ -736,7 +752,7 @@
             </div>
 
             <!-- Panel ESI -->
-            <div id="panel-esi" class="panel-info hidden space-y-3 pt-4">
+            <div id="panel-esi" class="panel-info hidden space-y-3 pt-2">
                 <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                     <i data-lucide="book-open" class="w-6 h-6" style="color: #e30381;"></i> ESI (Educación Sexual Integral)
                 </h3>
@@ -919,14 +935,30 @@
             });
             seccionInfo.classList.remove('hidden');
 
+            // Ocultar todos los paneles internos de información
             const paneles = document.querySelectorAll('.panel-info');
             paneles.forEach(p => p.classList.add('hidden'));
             
+            // Mostrar el panel seleccionado
             const panelActivo = document.getElementById('panel-' + tipo);
             if (panelActivo) {
                 panelActivo.classList.remove('hidden');
-                seccionInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+
+            // Actualizar el estado visual de los botones de navegación interna de información
+            const botonesInfo = document.querySelectorAll('.info-nav-btn');
+            botonesInfo.forEach(b => {
+                b.classList.remove('bg-[#2e1044]', 'text-white', 'shadow-sm');
+                b.classList.add('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+            });
+
+            const btnNavActivo = document.getElementById('btn-info-' + tipo);
+            if (btnNavActivo) {
+                btnNavActivo.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+                btnNavActivo.classList.add('bg-[#2e1044]', 'text-white', 'shadow-sm');
+            }
+
+            seccionInfo.scrollIntoView({ behavior: 'smooth', block: 'start' });
             mobileMenu.classList.add('hidden');
         }
 

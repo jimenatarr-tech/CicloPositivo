@@ -553,6 +553,86 @@
         </div>
     </section>
 
+    <!-- NUEVA SECCIÓN DE INFORMACIÓN REDISEÑADA (TARJETAS INTERACTIVAS Y MODAL/ACORDEÓN) -->
+    <section id="informacion" class="py-20 px-4 max-w-6xl mx-auto">
+        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Ejes Temáticos</span>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Información y Derechos</h2>
+                <p class="text-sm text-slate-600 mt-2">Seleccioná o explorá cada área clave de nuestro trabajo y asesoramiento comunitario.</p>
+            </div>
+
+            <!-- Grilla Principal de Tarjetas de Información -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Tarjeta 1: VIH -->
+                <a href="#vih" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
+                            <i data-lucide="activity" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2" style="color: #2e1044;">VIH</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                            Información científica, testeo, prevención combinada (PrEP/PEP), tratamientos y Ley Nacional.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
+                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 2: ITS -->
+                <a href="#its" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
+                            <i data-lucide="shield-alert" class="w-6 h-6 text-slate-900"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2" style="color: #2e1044;">Infecciones de Transmisión Sexual</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                            Prevención, importancia del testeo periódico y diagnóstico temprano para el cuidado integral.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
+                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 3: Población Trans -->
+                <a href="#poblacion-trans" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2" style="color: #2e1044;">Población Trans</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                            Inclusión, respeto al trato digno, Ley de Identidad de Género y redes comunitarias de apoyo.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
+                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </a>
+
+                <!-- Tarjeta 4: ESI -->
+                <a href="#esi" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
+                            <i data-lucide="book-open" class="w-6 h-6 text-slate-900"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2" style="color: #2e1044;">ESI</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                            Educación Sexual Integral como herramienta clave para la promoción de la salud y prevención de violencias.
+                        </p>
+                    </div>
+                    <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
+                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN INTERACTIVA: VIH (ID: vih) -->
     <section id="vih" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
@@ -688,7 +768,7 @@
                         <i data-lucide="scale" class="w-6 h-6" style="color: #e30381;"></i> Ley Nacional de VIH (Nº 27.675)
                     </h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Sancionada tras años de lucha comunitaria y activismo en Argentina, la Ley 27.675 propone un abordaje integral desde los derechos humanos.
+                        Sancionada tras años de lucha comunitaria y activismo en Argentina, la Ley 27.675 proposes un abordaje integral desde los derechos humanos.
                     </p>
                     <ul class="space-y-2 text-xs md:text-sm text-slate-700">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Garantiza acceso universal y gratuito a medicamentos y testeos.</li>

@@ -301,7 +301,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN QUIÉNES SOMOS (CON LÍNEA DE TIEMPO HORIZONTAL Y AÑOS REALES) -->
+    <!-- SECCIÓN QUIÉNES SOMOS (CON CARTELES INTERACTIVOS DE LUCHA) -->
     <section id="quienes-somos" class="py-20 px-4 max-w-6xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl flex flex-col items-center text-center">
             
@@ -325,77 +325,116 @@
                 </p>
             </div>
 
-            <!-- LÍNEA DE TIEMPO HORIZONTAL DE NUESTRO RECORRIDO (CON AÑOS) -->
+            <!-- SECCIÓN DE CARTELES DE LUCHA CON TUS NOMBRES DE ARCHIVO -->
             <div class="w-full text-left mt-6 pt-8 border-t border-slate-200">
-                <h3 class="text-lg md:text-xl font-bold uppercase text-center mb-8" style="color: #2e1044;">
-                    Nuestro Recorrido Colectivo
-                </h3>
+                <div class="text-center mb-8">
+                    <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block text-slate-900" style="background-color: #41b8bf;">Nuestra Identidad</span>
+                    <h3 class="text-xl md:text-2xl font-bold uppercase" style="color: #2e1044;">
+                        Carteles que llevan nuestra voz a las calles
+                    </h3>
+                    <p class="text-xs md:text-sm text-slate-500 mt-1">Pasá el cursor o tocá cada cartel para conocer la consigna que nos mueve.</p>
+                </div>
 
-                <!-- Contenedor del Carrusel Horizontal de Hitos -->
-                <div class="grid grid-flow-col auto-cols-[280px] sm:auto-cols-[320px] gap-6 overflow-x-auto no-scrollbar pb-6 pt-2 px-2 snap-x">
+                <!-- Grilla de Carteles Interactivos -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     
-                    <!-- Hito 1 -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
-                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
-                            2013
-                        </div>
-                        <div class="mt-2">
-                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Inicios en RAJAP y Ministerio</h4>
-                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                                Primeros pasos en la Red Argentina de Jóvenes y Adolescentes Positivos (RAJAP) y trabajo en el Área de Derechos Humanos de la Dirección de Sida.
-                            </p>
+                    <!-- Cartel 1: odio.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="odio.jpeg" alt="Frente al odio y la violencia más orgullo y unidad" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Comunidad y Resistencia</span>
+                            <h4 class="font-bold text-base mb-2">Más Orgullo y Unidad</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Frente a los discursos de odio y la violencia, respondemos construyendo comunidad, abrazándonos colectivamente y defendiendo nuestros derechos con orgullo.</p>
                         </div>
                     </div>
 
-                    <!-- Hito 2 -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
-                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
-                            2014
-                        </div>
-                        <div class="mt-2">
-                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Borrador Cero de la Ley</h4>
-                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                                Construcción colectiva, encuestas a pares y aportes federales desde las juventudes para el nuevo marco legal de VIH.
-                            </p>
+                    <!-- Cartel 2: discursos.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="discursos.jpeg" alt="Discursos de odio = Muerte" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Derechos Humanos</span>
+                            <h4 class="font-bold text-base mb-2">Basta de Estigma</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Los discursos discriminatorios y violentos generan exclusión real y atentan contra la vida y la salud integral de las personas.</p>
                         </div>
                     </div>
 
-                    <!-- Hito 3 -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
-                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
-                            Comunidad
-                        </div>
-                        <div class="mt-2">
-                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Grupos de Encuentro</h4>
-                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                                Consolidación de espacios presenciales de escucha y contención en CABA y expansión comunitaria a nivel federal.
-                            </p>
+                    <!-- Cartel 3: cura.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="cura.jpeg" alt="Exigimos la cura yaaa!" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Investigación y Ciencia</span>
+                            <h4 class="font-bold text-base mb-2">Exigimos la Cura ¡Ya!</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Reclamamos inversión estatal en investigación científica y desarrollo para alcanzar una cura definitiva y universal para el VIH.</p>
                         </div>
                     </div>
 
-                    <!-- Hito 4 -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
-                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
-                            2022
-                        </div>
-                        <div class="mt-2">
-                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Sanción Ley Nº 27.675</h4>
-                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                                Aprobación histórica de la nueva Ley Nacional de Respuesta Integral al VIH, ITS, Hepatitis Virales y Tuberculosis.
-                            </p>
+                    <!-- Cartel 4: indetectable.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="indetectable.jpeg" alt="Indetectable = Intransmisible" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Evidencia Científica</span>
+                            <h4 class="font-bold text-base mb-2">I = I (Indetectable = Intransmisible)</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Quienes viven con VIH y toman su tratamiento con carga viral indetectable no transmiten el virus por vía sexual. Rompemos mitos con ciencia.</p>
                         </div>
                     </div>
 
-                    <!-- Hito 5 -->
-                    <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl shadow-sm snap-start flex flex-col justify-between relative">
-                        <div class="absolute -top-3 left-6 text-[10px] font-bold px-3 py-1 rounded-full text-slate-900 shadow-xs" style="background-color: #41b8bf;">
-                            Presente
+                    <!-- Cartel 5: trabajo.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="trabajo.jpeg" alt="Trabajo sexual es trabajo" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Inclusión y Derechos</span>
+                            <h4 class="font-bold text-base mb-2">Trabajo Sexual es Trabajo</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Acompañamos y defendemos los derechos laborales, el reconocimiento y la protección social de las trabajadoras sexuales.</p>
                         </div>
-                        <div class="mt-2">
-                            <h4 class="font-bold text-base mb-2" style="color: #2e1044;">Sostenibilidad y Cursos</h4>
-                            <p class="text-xs md:text-sm text-slate-600 leading-relaxed font-normal">
-                                Formación de activistas, impulso de leyes provinciales y modelo de sustentabilidad sostenido por aportes comunitarios.
-                            </p>
+                    </div>
+
+                    <!-- Cartel 6: ESI.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="ESI.jpeg" alt="La ESI salva vidas" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Educación y Salud</span>
+                            <h4 class="font-bold text-base mb-2">La ESI Salva Vidas</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">La Educación Sexual Integral es una herramienta fundamental para prevenir violencias, promover la salud y construir infancias y juventudes libres.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cartel 7: mujeres.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="mujeres.jpeg" alt="Mujeres con VIH ¡Presentes y en lucha!" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Protagonismo Femenino</span>
+                            <h4 class="font-bold text-base mb-2">Mujeres con VIH</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Visibilizamos las vivencias, la autonomía y el liderazgo histórico de las mujeres que ponen el cuerpo y organizan la resistencia cotidiana.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cartel 8: maternidades.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="maternidades.jpeg" alt="Maternidades con VIH: libres, informadas y sin estigma" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Derechos Reproductivos</span>
+                            <h4 class="font-bold text-base mb-2">Maternidades Libres</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Derecho pleno a decidir sobre nuestros cuerpos, gestar y maternar con información científica confiable y sin juicios morales ni estigmas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cartel 9: sabes.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 cursor-pointer">
+                        <img src="sabes.jpeg" alt="¿Sabés qué te estás metiendo? Reducción de daños ya!" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Salud Comunitaria</span>
+                            <h4 class="font-bold text-base mb-2">Reducción de Daños</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Abordaje pragmático y basado en derechos frente al consumo, priorizando el cuidado, la información y el acompañamiento por sobre la punición.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cartel 10: ajuste.jpeg -->
+                    <div class="relative group overflow-hidden rounded-2xl shadow-md border border-slate-200 bg-slate-900 sm:col-span-2 md:col-span-3 cursor-pointer max-w-md mx-auto w-full">
+                        <img src="ajuste.jpeg" alt="El ajuste en salud mata" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
+                        <div class="absolute inset-0 bg-[#2e1044]/90 p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                            <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Defensa de la Salud Pública</span>
+                            <h4 class="font-bold text-base mb-2">El Ajuste en Salud Mata</h4>
+                            <p class="text-xs text-purple-100 leading-relaxed font-normal">Denunciamos el desfinanciamiento de los programas sanitarios y defendemos la salud pública como un derecho inquebrantable de toda la sociedad.</p>
                         </div>
                     </div>
 

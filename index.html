@@ -72,9 +72,9 @@
                     </button>
                     <div class="dropdown-menu hidden absolute top-full left-0 w-64 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
                         <a href="#vih" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">VIH</a>
-                        <a href="#informacion" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Infecciones de transmisión sexual</a>
-                        <a href="#informacion" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Población trans</a>
-                        <a href="#informacion" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">ESI</a>
+                        <a href="#informacion" onclick="toggleAcordeon('its')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Infecciones de transmisión sexual</a>
+                        <a href="#informacion" onclick="toggleAcordeon('trans')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Población trans</a>
+                        <a href="#informacion" onclick="toggleAcordeon('esi')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">ESI</a>
                     </div>
                 </div>
 
@@ -123,9 +123,9 @@
                 </button>
                 <div id="submenu-info-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
                     <a href="#vih" class="block py-1 hover:text-[#41b8bf]">▪ VIH</a>
-                    <a href="#informacion" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
-                    <a href="#informacion" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
-                    <a href="#informacion" class="block py-1 hover:text-[#41b8bf]">▪ ESI</a>
+                    <a href="#informacion" onclick="toggleAcordeon('its')" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
+                    <a href="#informacion" onclick="toggleAcordeon('trans')" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
+                    <a href="#informacion" onclick="toggleAcordeon('esi')" class="block py-1 hover:text-[#41b8bf]">▪ ESI</a>
                 </div>
             </div>
 
@@ -582,7 +582,7 @@
                 </a>
 
                 <!-- Tarjeta 2: ITS (Despliega Acordeón) -->
-                <button onclick="toggleAcordeon('its')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
+                <button type="button" onclick="toggleAcordeon('its')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
                             <i data-lucide="shield-alert" class="w-6 h-6 text-slate-900"></i>
@@ -598,7 +598,7 @@
                 </button>
 
                 <!-- Tarjeta 3: Población Trans (Despliega Acordeón) -->
-                <button onclick="toggleAcordeon('trans')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
+                <button type="button" onclick="toggleAcordeon('trans')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
                             <i data-lucide="users" class="w-6 h-6"></i>
@@ -614,7 +614,7 @@
                 </button>
 
                 <!-- Tarjeta 4: ESI (Despliega Acordeón) -->
-                <button onclick="toggleAcordeon('esi')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
+                <button type="button" onclick="toggleAcordeon('esi')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
                             <i data-lucide="book-open" class="w-6 h-6 text-slate-900"></i>
@@ -632,8 +632,8 @@
             </div>
 
             <!-- CONTENIDO DESPLEGABLE DE ACORDEÓN (ITS, TRANS, ESI) -->
-            <div id="acordeon-contenido" class="hidden mt-8 bg-purple-50/80 border border-purple-100 p-6 md:p-8 rounded-2xl relative">
-                <button onclick="cerrarAcordeon()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1">
+            <div id="acordeon-contenido" class="hidden mt-8 bg-purple-50/90 border border-purple-200 p-6 md:p-8 rounded-2xl relative shadow-md">
+                <button type="button" onclick="cerrarAcordeon()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
 
@@ -691,25 +691,25 @@
 
             <!-- BOTONES DE PESTAÑAS (TABS) -->
             <div class="flex flex-wrap gap-2 justify-center mb-8 border-b border-slate-200 pb-4">
-                <button onclick="cambiarTab('que-es')" id="btn-que-es" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-[#2e1044] text-white shadow-sm flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('que-es')" id="btn-que-es" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-[#2e1044] text-white shadow-sm flex items-center gap-2 cursor-pointer">
                     <i data-lucide="help-circle" class="w-4 h-4"></i> ¿Qué es el VIH?
                 </button>
-                <button onclick="cambiarTab('diferencia')" id="btn-diferencia" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('diferencia')" id="btn-diferencia" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="git-compare" class="w-4 h-4"></i> VIH vs. sida
                 </button>
-                <button onclick="cambiarTab('test')" id="btn-test" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('test')" id="btn-test" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="search" class="w-4 h-4"></i> ¿Cómo saber si lo tengo?
                 </button>
-                <button onclick="cambiarTab('vias')" id="btn-vias" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('vias')" id="btn-vias" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="share-2" class="w-4 h-4"></i> Vías de transmisión
                 </button>
-                <button onclick="cambiarTab('prevencion')" id="btn-prevencion" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('prevencion')" id="btn-prevencion" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="shield-check" class="w-4 h-4"></i> Prevención & PrEP/PEP
                 </button>
-                <button onclick="cambiarTab('tratamiento')" id="btn-tratamiento" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('tratamiento')" id="btn-tratamiento" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="activity" class="w-4 h-4"></i> I = I
                 </button>
-                <button onclick="cambiarTab('ley')" id="btn-ley" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
+                <button type="button" onclick="cambiarTab('ley')" id="btn-ley" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
                     <i data-lucide="scale" class="w-4 h-4"></i> Ley de VIH
                 </button>
             </div>
@@ -859,7 +859,7 @@
                 </div>
 
                 <div class="text-center pt-2">
-                    <button disabled class="inline-flex items-center gap-2 bg-slate-300 text-slate-600 font-semibold px-6 py-3.5 rounded-xl cursor-not-allowed shadow-xs">
+                    <button type="button" disabled class="inline-flex items-center gap-2 bg-slate-300 text-slate-600 font-semibold px-6 py-3.5 rounded-xl cursor-not-allowed shadow-xs">
                         <i data-lucide="lock" class="w-4 h-4"></i> Inscripciones cerradas
                     </button>
                 </div>
@@ -927,7 +927,7 @@
         });
 
         let autoplay = setInterval(() => {
-            if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10)5 {
+            if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
                 carrusel.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
                 carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
@@ -985,7 +985,7 @@
             }
         }
 
-        // Función para manejar el acordeón de información (ITS, Trans, ESI)
+        // Función corregida para manejar el acordeón de información (ITS, Trans, ESI)
         function toggleAcordeon(tipo) {
             const contenedor = document.getElementById('acordeon-contenido');
             const paneles = document.querySelectorAll('.panel-info');

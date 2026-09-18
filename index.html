@@ -129,7 +129,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION (ACCESOS RÁPIDOS Y CARRUSEL "EN QUÉ ANDA CICLO") -->
+    <!-- HERO SECTION -->
     <section class="relative py-14 md:py-24 text-white overflow-hidden text-center">
         <div class="max-w-6xl mx-auto px-4 relative z-10">
             <span class="inline-block text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 text-slate-900 shadow-sm" style="background-color: #41b8bf;">
@@ -142,7 +142,7 @@
                 Somos un colectivo de activistas, profesionales y referentes que trabajamos por el acompañamiento integral a poblaciones diversas y en situación de vulnerabilidad.
             </p>
             
-            <!-- Los 4 Botones de Acceso Rápido Actualizados -->
+            <!-- Botones de Acceso Rápido -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto text-sm font-semibold mb-12">
                 <a href="#quienes-somos" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
                     <i data-lucide="users" class="w-5 h-5"></i> Quiénes somos
@@ -158,14 +158,13 @@
                 </a>
             </div>
 
-            <!-- SECCIÓN: ¿EN QUÉ ANDA CICLO? (Carrusel con Botones Manuales y Autoplay) -->
+            <!-- CARRUSEL "EN QUÉ ANDA CICLO" -->
             <div class="max-w-6xl mx-auto text-left mt-8">
                 <div class="flex items-center justify-between mb-4 px-2">
                     <h3 class="text-lg md:text-xl font-bold tracking-tight uppercase flex items-center gap-2 text-white">
                         <span class="w-3 h-3 rounded-full animate-pulse inline-block" style="background-color: #e30381;"></span> 
                         ¿En qué anda Ciclo?
                     </h3>
-                    <!-- Botones de Navegación Manual -->
                     <div class="flex items-center gap-2">
                         <button id="prev-btn" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white p-2 rounded-full transition-colors focus:outline-none shadow-md">
                             <i data-lucide="chevron-left" class="w-5 h-5"></i>
@@ -176,10 +175,8 @@
                     </div>
                 </div>
 
-                <!-- Contenedor del Carrusel -->
                 <div id="carrusel-ciclo" class="grid grid-flow-col auto-cols-[100%] sm:auto-cols-[calc(50%-8px)] md:auto-cols-[calc(33.333%-11px)] gap-4 overflow-x-auto no-scrollbar pb-4 pt-1 px-1 snap-x">
                     
-                    <!-- Tarjeta 1 -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
@@ -203,7 +200,6 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2 -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
@@ -226,7 +222,6 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3 -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
@@ -249,7 +244,6 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 4 -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
@@ -272,7 +266,6 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 5 -->
                     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg snap-start flex flex-col justify-between overflow-hidden">
                         <div>
                             <div class="h-44 overflow-hidden bg-purple-950 flex items-center justify-center">
@@ -301,7 +294,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN QUIÉNES SOMOS (CON CARTELES ESTILO PEGATINA, MANITOS Y ROTADOS) -->
+    <!-- SECCIÓN QUIÉNES SOMOS (CON CARTELES SIN BORDE, ROTADOS Y CON MANITAS SOSTENIÉNDOLOS) -->
     <section id="quienes-somos" class="py-20 px-4 max-w-6xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl flex flex-col items-center text-center">
             
@@ -325,9 +318,9 @@
                 </p>
             </div>
 
-            <!-- SECCIÓN DE CARTELES DE LUCHA -->
+            <!-- SECCIÓN DE CARTELES DE LUCHA (GRILLA DE 3 x 4 EQUILIBRADA Y MANITAS) -->
             <div class="w-full text-left mt-6 pt-8 border-t border-slate-200">
-                <div class="text-center mb-8">
+                <div class="text-center mb-10">
                     <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block text-slate-900" style="background-color: #41b8bf;">Nuestra Identidad</span>
                     <h3 class="text-xl md:text-2xl font-bold uppercase" style="color: #2e1044;">
                         Carteles que llevan nuestra voz a las calles
@@ -335,14 +328,11 @@
                     <p class="text-xs md:text-sm text-slate-500 mt-1">Pasá el cursor o tocá cada cartel para conocer la consigna que nos mueve.</p>
                 </div>
 
-                <!-- Grilla de Carteles Optimizada -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-4 px-2">
+                <!-- Grilla de 3 columnas equilibradas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 pt-4 px-2">
                     
                     <!-- Cartel 1: odio.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="odio.jpeg" alt="Más Orgullo y Unidad" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -351,13 +341,17 @@
                             <h4 class="font-bold text-xs mb-1">Más Orgullo y Unidad</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Frente a los discursos de odio y la violencia, respondemos construyendo comunidad y defendiendo nuestros derechos con orgullo.</p>
                         </div>
+                        <!-- Manitos sosteniendo desde abajo -->
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 2: discursos.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="discursos.jpeg" alt="Basta de Estigma" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -366,13 +360,16 @@
                             <h4 class="font-bold text-xs mb-1">Basta de Estigma</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Los discursos discriminatorios generan exclusión real y atentan contra la vida y la salud integral de las personas.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 3: cura.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="cura.jpeg" alt="Exigimos la Cura" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -381,13 +378,16 @@
                             <h4 class="font-bold text-xs mb-1">Exigimos la Cura ¡Ya!</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Reclamamos inversión estatal en investigación científica para alcanzar una cura definitiva y universal para el VIH.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 4: indetectable.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="indetectable.jpeg" alt="Indetectable = Intransmisible" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -396,13 +396,16 @@
                             <h4 class="font-bold text-xs mb-1">I = I</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Quienes viven con VIH y toman su tratamiento con carga viral indetectable no transmiten el virus por vía sexual.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 5: trabajo.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="trabajo.jpeg" alt="Trabajo Sexual" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -411,13 +414,16 @@
                             <h4 class="font-bold text-xs mb-1">Trabajo Sexual es Trabajo</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Acompañamos y defendemos los derechos laborales, el reconocimiento y la protección social.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 6: ESI.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="ESI.jpeg" alt="La ESI Salva Vidas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -426,13 +432,16 @@
                             <h4 class="font-bold text-xs mb-1">La ESI Salva Vidas</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Herramienta fundamental para prevenir violencias, promover la salud y construir juventudes libres.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 7: mujeres.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="mujeres.jpeg" alt="Mujeres con VIH" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -441,13 +450,16 @@
                             <h4 class="font-bold text-xs mb-1">Mujeres con VIH</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Visibilizamos las vivencias, la autonomía y el liderazgo histórico de las mujeres en la resistencia.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 8: maternidades.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="maternidades.jpeg" alt="Maternidades Libres" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -456,13 +468,16 @@
                             <h4 class="font-bold text-xs mb-1">Maternidades Libres</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Derecho pleno a decidir sobre nuestros cuerpos, gestar y maternar con información y sin estigmas.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
                     <!-- Cartel 9: sabes.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="sabes.jpeg" alt="Reducción de Daños" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -471,13 +486,16 @@
                             <h4 class="font-bold text-xs mb-1">Reducción de Daños</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Abordaje pragmático frente al consumo, priorizando el cuidado, la información y el acompañamiento.</p>
                         </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
                     </div>
 
-                    <!-- Cartel 10: ajuste.jpeg -->
-                    <div class="relative group overflow-hidden border-4 border-[#e30381] bg-slate-900 cursor-pointer shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto sm:col-span-2 md:col-span-3">
-                        <div class="absolute -top-3 left-4 w-6 h-4 bg-[#e30381] z-20"></div>
-                        <div class="absolute -top-3 right-4 w-6 h-4 bg-[#e30381] z-20"></div>
-
+                    <!-- Cartel 10: ajuste.jpeg (Ahora perfectamente integrado en la grilla sin quedar solo) -->
+                    <div class="relative group overflow-hidden bg-slate-900 cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[280px] mx-auto pb-4 sm:col-span-2 md:col-span-3 sm:max-w-xs">
                         <div class="w-full h-36 bg-slate-950 flex items-center justify-center overflow-hidden">
                             <img src="ajuste.jpeg" alt="El Ajuste en Salud Mata" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-30">
                         </div>
@@ -485,6 +503,12 @@
                             <span class="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded w-max mb-1.5 text-slate-900" style="background-color: #41b8bf;">Salud Pública</span>
                             <h4 class="font-bold text-xs mb-1">El Ajuste en Salud Mata</h4>
                             <p class="text-[10px] text-purple-100 leading-tight">Denunciamos el desfinanciamiento y defendemos la salud pública como un derecho inquebrantable.</p>
+                        </div>
+                        <div class="absolute -bottom-1 left-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
+                        </div>
+                        <div class="absolute -bottom-1 right-6 flex items-end gap-1 z-20 pointer-events-none">
+                            <svg class="w-8 h-8 text-[#fbcfe8] drop-shadow-md scale-x-[-1]" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v1h-1V4a2 2 0 0 0-4 0v7H8V9a2 2 0 0 0-4 0v6c0 4.41 3.59 8 8 8s8-3.59 8-8v-3h-2z"/></svg>
                         </div>
                     </div>
 
@@ -625,7 +649,6 @@
             <!-- CONTENIDO DE LAS PESTAÑAS -->
             <div class="bg-purple-50/70 border border-purple-100 p-6 md:p-8 rounded-2xl min-h-[260px] flex flex-col justify-center">
                 
-                <!-- TAB 1: ¿Qué es el VIH? -->
                 <div id="tab-que-es" class="tab-content space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="help-circle" class="w-6 h-6" style="color: #e30381;"></i> ¿Qué es el VIH?
@@ -638,7 +661,6 @@
                     </p>
                 </div>
 
-                <!-- TAB 2: VIH vs sida -->
                 <div id="tab-diferencia" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="git-compare" class="w-6 h-6" style="color: #e30381;"></i> Diferencia entre VIH y sida
@@ -655,7 +677,6 @@
                     </div>
                 </div>
 
-                <!-- TAB 3: ¿Cómo me doy cuenta? -->
                 <div id="tab-test" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="search" class="w-6 h-6" style="color: #e30381;"></i> ¿Cómo me doy cuenta si tengo VIH?
@@ -673,7 +694,6 @@
                     </div>
                 </div>
 
-                <!-- TAB 4: Vías de transmisión -->
                 <div id="tab-vias" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="share-2" class="w-6 h-6" style="color: #e30381;"></i> Vías de transmisión
@@ -694,7 +714,6 @@
                     </div>
                 </div>
 
-                <!-- TAB 5: Prevención, PrEP y PEP -->
                 <div id="tab-prevencion" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="shield-check" class="w-6 h-6" style="color: #e30381;"></i> Prevención combinada: PrEP y PEP
@@ -711,7 +730,6 @@
                     </div>
                 </div>
 
-                <!-- TAB 6: I = I -->
                 <div id="tab-tratamiento" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="activity" class="w-6 h-6" style="color: #e30381;"></i> I = I
@@ -724,7 +742,6 @@
                     </p>
                 </div>
 
-                <!-- TAB 7: Ley de VIH -->
                 <div id="tab-ley" class="tab-content hidden space-y-4">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
                         <i data-lucide="scale" class="w-6 h-6" style="color: #e30381;"></i> Ley Nacional de VIH (Nº 27.675)
@@ -748,7 +765,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: INFECCIONES DE TRANSMISIÓN SEXUAL -->
+    <!-- SECCIÓN: ITS -->
     <section id="its" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -802,7 +819,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: FORMACIÓN (CURSO DE ACTIVISMO EN SALUD) -->
+    <!-- SECCIÓN: FORMACIÓN -->
     <section id="curso-activismo" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -836,7 +853,7 @@
         </div>
     </section>
 
-    <!-- GALERÍA DE FOTOS -->
+    <!-- GALERÍA -->
     <section id="galeria" class="py-20 px-4 max-w-5xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-8">
@@ -867,18 +884,16 @@
         </div>
     </footer>
 
-    <!-- Script para inicializar íconos, menús, carrusel y pestañas interactivas -->
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
 
-        // Control del menú hamburguesa
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Control de submenús en celular
         document.getElementById('submenu-info-btn').addEventListener('click', () => {
             document.getElementById('submenu-info-content').classList.toggle('hidden');
         });
@@ -886,7 +901,6 @@
             document.getElementById('submenu-act-content').classList.toggle('hidden');
         });
 
-        // Navegación del carrusel
         const carrusel = document.getElementById('carrusel-ciclo');
         document.getElementById('next-btn').addEventListener('click', () => {
             carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
@@ -895,7 +909,6 @@
             carrusel.scrollBy({ left: -carrusel.clientWidth * 0.8, behavior: 'smooth' });
         });
 
-        // Autoplay del carrusel
         let autoplay = setInterval(() => {
             if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
                 carrusel.scrollTo({ left: 0, behavior: 'smooth' });
@@ -915,26 +928,21 @@
             }, 3500);
         });
 
-        // Lógica de Pestañas Interactivas para VIH
         function cambiarTab(tabId) {
-            // Ocultar todos los contenidos de las pestañas
             const contenidos = document.querySelectorAll('.tab-content');
             contenidos.forEach(c => c.classList.add('hidden'));
 
-            // Resetear estilo de todos los botones de pestaña
             const botones = document.querySelectorAll('.tab-btn');
             botones.forEach(b => {
                 b.classList.remove('bg-[#2e1044]', 'text-white', 'shadow-sm');
                 b.classList.add('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
             });
 
-            // Mostrar el contenido de la pestaña seleccionada
             const tabSeleccionada = document.getElementById('tab-' + tabId);
             if (tabSeleccionada) {
                 tabSeleccionada.classList.remove('hidden');
             }
 
-            // Activar el botón correspondiente
             const btnActivo = document.getElementById('btn-' + tabId);
             if (btnActivo) {
                 btnActivo.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');

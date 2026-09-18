@@ -333,7 +333,7 @@
             </div>
             
             <div class="w-full max-w-2xl overflow-hidden shadow-md border border-slate-200 mb-8 rounded-2xl bg-white">
-                <img src="equipo.jpg" alt="Colectivo Ciclo Positivo" class="w-full h-auto block object-cover">
+                <img src="equipo.jpeg" alt="Colectivo Ciclo Positivo" class="w-full h-auto block object-cover">
             </div>
 
             <div class="w-full max-w-3xl space-y-4 text-slate-600 text-sm md:text-base font-normal text-left md:text-center leading-relaxed mb-12">
@@ -487,13 +487,13 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: ACTIVIDADES (FLYERS VERTICALES LADO A LADO CON EFECTO TÁCTIL) -->
+    <!-- SECCIÓN: ACTIVIDADES (FLYERS VERTICALES LADO A LADO CON INFO COMPLETA) -->
     <section id="actividades" class="py-20 px-4 max-w-4xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Comunidad y Cultura</span>
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Nuestras Actividades</h2>
-                <p class="text-xs md:text-sm text-slate-500 mt-1">Pasá el cursor o tocá cada volante para conocer todos los detalles.</p>
+                <p class="text-xs md:text-sm text-slate-500 mt-1">Pasá el cursor o tocá cada volante para ver toda la información detallada.</p>
             </div>
 
             <!-- Grilla de 2 columnas para formato vertical -->
@@ -501,20 +501,24 @@
                 
                 <!-- Actividad 1: Grupos de Encuentro (gruposencuentro.jpg) -->
                 <div class="actividad-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rounded-2xl border border-slate-200">
-                    <img src="gruposencuentro.jpg" alt="Grupos de Encuentro" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-20">
-                    <div class="actividad-info absolute inset-0 bg-[#2e1044]/95 p-6 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-2xl space-y-3">
-                        <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max text-slate-900" style="background-color: #41b8bf;">Espacio de Apoyo</span>
-                        <h3 class="text-lg font-bold">Grupos de Encuentro</h3>
-                        <p class="text-xs md:text-sm text-purple-100 leading-relaxed">
-                            Espacio para compartir, escucharnos y acompañarnos desde una mirada de salud integral comunitaria. Abierto a personas con y sin VIH.
+                    <img src="gruposencuentro.jpg" alt="Grupos de Encuentro" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-10">
+                    <div class="actividad-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-2xl space-y-2 overflow-y-auto">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded w-max text-slate-900" style="background-color: #41b8bf;">Actividad</span>
+                        <h3 class="text-base font-bold">Grupos de Encuentro</h3>
+                        <p class="text-[11px] text-purple-100 leading-relaxed font-normal">
+                            El grupo de encuentro es un espacio para compartir, escucharnos y acompañarnos, desde una mirada de salud integral comunitaria.
                         </p>
-                        <div class="text-xs text-purple-200 space-y-1 font-normal pt-1">
-                            <p>📍 <strong>CABA:</strong> Viernes de 17:30 a 19:00 hs</p>
-                            <p>📍 <strong>Ushuaia:</strong> Un sábado al mes de 18 a 20 hs</p>
+                        <p class="text-[11px] text-purple-100 leading-relaxed font-normal">
+                            Los grupos están abiertos a personas con y sin VIH que quieran encontrarse, hacer preguntas, intercambiar experiencias y construir redes de apoyo.
+                        </p>
+                        <div class="bg-purple-900/50 border border-purple-800 p-2.5 rounded-xl text-[11px] text-purple-100 space-y-1">
+                            <p>📍 <strong>CABA:</strong> Todos los viernes de 17:30 a 19:00 hs</p>
+                            <p>📍 <strong>Ushuaia:</strong> Un sábado por mes de 18 a 20 hs</p>
+                            <p class="text-purple-200 font-medium pt-0.5">💜 Si vivís en Córdoba o Mendoza, anotate para recibir novedades.</p>
                         </div>
-                        <div class="pt-2">
-                            <a href="https://bit.ly/gruposdeencuentro" target="_blank" class="inline-flex items-center gap-2 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
-                                Inscribite <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        <div class="pt-1 text-center">
+                            <a href="https://bit.ly/gruposdeencuentro" target="_blank" class="inline-flex items-center gap-1.5 text-white text-[11px] font-semibold px-4 py-2 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Inscribite a los Grupos
                             </a>
                         </div>
                     </div>
@@ -522,20 +526,24 @@
 
                 <!-- Actividad 2: Clases de Folclore (folclore2.jpg) -->
                 <div class="actividad-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rounded-2xl border border-slate-200">
-                    <img src="folclore2.jpg" alt="Clases de Folclore" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-20">
-                    <div class="actividad-info absolute inset-0 bg-[#2e1044]/95 p-6 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-2xl space-y-3">
-                        <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max text-slate-900" style="background-color: #41b8bf;">Cultura Popular</span>
-                        <h3 class="text-lg font-bold">Clases de Folclore</h3>
-                        <p class="text-xs md:text-sm text-purple-100 leading-relaxed">
-                            Bailamos nuestras danzas populares desde la diversidad, cuestionando roles tradicionales y construyendo un espacio libre.
+                    <img src="folclore2.jpg" alt="Clases de Folclore" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-10">
+                    <div class="actividad-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-2xl space-y-2 overflow-y-auto">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded w-max text-slate-900" style="background-color: #41b8bf;">Actividad</span>
+                        <h3 class="text-base font-bold">Clases de Folclore</h3>
+                        <p class="text-[11px] text-purple-100 leading-relaxed font-normal">
+                            Abrimos las puertas de nuestra sede en CABA para encontrarnos también desde la danza y la cultura popular con el profe David Ceballos Tulian.
                         </p>
-                        <div class="text-xs text-purple-200 space-y-1 font-normal pt-1">
-                            <p>🗓️ <strong>Miércoles de 17:30 a 19 h</strong></p>
+                        <p class="text-[11px] text-purple-100 leading-relaxed font-normal">
+                            Bailamos nuestras danzas populares desde la diversidad, cuestionando roles tradicionales de género y construyendo un espacio libre. 🏳️‍🌈
+                        </p>
+                        <div class="bg-purple-900/50 border border-purple-800 p-2.5 rounded-xl text-[11px] text-purple-100 space-y-1">
+                            <p>🗓️ <strong>Miércoles de 17.30 a 19 h</strong></p>
                             <p>📍 <strong>Sede CABA — Actividad libre y gratuita</strong></p>
+                            <p class="text-purple-200 font-medium pt-0.5">✨ No necesitás experiencia previa.</p>
                         </div>
-                        <div class="pt-2">
-                            <a href="https://bit.ly/folcloreenciclo" target="_blank" class="inline-flex items-center gap-2 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
-                                Inscribite <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        <div class="pt-1 text-center">
+                            <a href="https://bit.ly/folcloreenciclo" target="_blank" class="inline-flex items-center gap-1.5 text-white text-[11px] font-semibold px-4 py-2 rounded-xl transition-all shadow-sm hover:opacity-90" style="background-color: #e30381;">
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Inscribite a Folclore
                             </a>
                         </div>
                     </div>

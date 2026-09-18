@@ -37,6 +37,15 @@
             scrollbar-width: none;
             scroll-behavior: smooth;
         }
+        /* Clase para mostrar el texto al tocar en celular */
+        .cartel-card.active .cartel-info {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+        .cartel-card.active img {
+            opacity: 0.25 !important;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -294,7 +303,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN QUIÉNES SOMOS (GRILLA 3x3 LIMPIA SIN BORDES NEGROS) -->
+    <!-- SECCIÓN QUIÉNES SOMOS (GRILLA 3x3 TÁCTIL) -->
     <section id="quienes-somos" class="py-20 px-4 max-w-6xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl flex flex-col items-center text-center">
             
@@ -318,7 +327,7 @@
                 </p>
             </div>
 
-            <!-- SECCIÓN DE CARTELES DE LUCHA (3x3 SIN BORDES OSCUROS) -->
+            <!-- SECCIÓN DE CARTELES DE LUCHA (3x3 CON SOPORTE TÁCTIL) -->
             <div class="w-full text-left mt-6 pt-8 border-t border-slate-200">
                 <div class="text-center mb-10">
                     <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block text-slate-900" style="background-color: #41b8bf;">Nuestra Identidad</span>
@@ -332,9 +341,9 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pt-4 px-2">
                     
                     <!-- 1: odio.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="odio.jpeg" alt="Más Orgullo y Unidad" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Comunidad</span>
                             <h4 class="font-bold text-sm mb-1">Más Orgullo y Unidad</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Frente a los discursos de odio y la violencia, respondemos construyendo comunidad y defendiendo nuestros derechos con orgullo.</p>
@@ -342,9 +351,9 @@
                     </div>
 
                     <!-- 2: discursos.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="discursos.jpeg" alt="Basta de Estigma" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Derechos</span>
                             <h4 class="font-bold text-sm mb-1">Basta de Estigma</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Los discursos discriminatorios generan exclusión real y atentan contra la vida y la salud integral de las personas.</p>
@@ -352,9 +361,9 @@
                     </div>
 
                     <!-- 3: cura.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="cura.jpeg" alt="Exigimos la Cura" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Ciencia</span>
                             <h4 class="font-bold text-sm mb-1">Exigimos la Cura ¡Ya!</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Reclamamos inversión estatal en investigación científica para alcanzar una cura definitiva y universal para el VIH.</p>
@@ -362,9 +371,9 @@
                     </div>
 
                     <!-- 4: indetectable.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="indetectable.jpeg" alt="Indetectable = Intransmisible" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Evidencia</span>
                             <h4 class="font-bold text-sm mb-1">I = I</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Quienes viven con VIH y toman su tratamiento con carga viral indetectable no transmiten el virus por vía sexual.</p>
@@ -372,9 +381,9 @@
                     </div>
 
                     <!-- 5: trabajo.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="trabajo.jpeg" alt="Trabajo Sexual" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Inclusión</span>
                             <h4 class="font-bold text-sm mb-1">Trabajo Sexual es Trabajo</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Acompañamos y defendemos los derechos laborales, el reconocimiento y la protección social.</p>
@@ -382,9 +391,9 @@
                     </div>
 
                     <!-- 6: ESI.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="ESI.jpeg" alt="La ESI Salva Vidas" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Educación</span>
                             <h4 class="font-bold text-sm mb-1">La ESI Salva Vidas</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Herramienta fundamental para prevenir violencias, promover la salud y construir juventudes libres.</p>
@@ -392,9 +401,9 @@
                     </div>
 
                     <!-- 7: mujeres.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-1 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="mujeres.jpeg" alt="Mujeres con VIH" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Protagonismo</span>
                             <h4 class="font-bold text-sm mb-1">Mujeres con VIH</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Visibilizamos las vivencias, la autonomía y el liderazgo histórico de las mujeres en la resistencia.</p>
@@ -402,9 +411,9 @@
                     </div>
 
                     <!-- 8: maternidades.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="maternidades.jpeg" alt="Maternidades Libres" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Derechos</span>
                             <h4 class="font-bold text-sm mb-1">Maternidades Libres</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Derecho pleno a decidir sobre nuestros cuerpos, gestar y maternar con información y sin estigmas.</p>
@@ -412,9 +421,9 @@
                     </div>
 
                     <!-- 9: sabes.jpeg -->
-                    <div class="relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
+                    <div class="cartel-card relative group overflow-hidden bg-transparent cursor-pointer shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px] mx-auto rounded-xl">
                         <img src="sabes.jpeg" alt="Reducción de Daños" class="w-full h-auto block transition-transform duration-500 group-hover:scale-105 group-hover:opacity-25">
-                        <div class="absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white rounded-xl">
+                        <div class="cartel-info absolute inset-0 bg-[#2e1044]/95 p-5 flex flex-col justify-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 text-white rounded-xl">
                             <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded w-max mb-2 text-slate-900" style="background-color: #41b8bf;">Salud</span>
                             <h4 class="font-bold text-sm mb-1">Reducción de Daños</h4>
                             <p class="text-xs text-purple-100 leading-relaxed">Abordaje pragmático frente al consumo, priorizando el cuidado, la información y el acompañamiento.</p>
@@ -835,6 +844,25 @@
                     carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
                 }
             }, 3500);
+        });
+
+        // Activar carteles al tocar en celulares y dispositivos táctiles
+        const cartelCards = document.querySelectorAll('.cartel-card');
+        cartelCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Si ya está activo, lo cerramos; si no, cerramos los demás y abrimos este
+                const isActive = card.classList.contains('active');
+                cartelCards.forEach(c => c.classList.remove('active'));
+                if (!isActive) {
+                    card.classList.add('active');
+                }
+                e.stopPropagation();
+            });
+        });
+
+        // Si toca en cualquier otra parte de la página, se cierran los carteles abiertos
+        document.addEventListener('click', () => {
+            cartelCards.forEach(c => c.classList.remove('active'));
         });
 
         function cambiarTab(tabId) {

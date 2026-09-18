@@ -71,7 +71,7 @@
                         Información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
                     </button>
                     <div class="dropdown-menu hidden absolute top-full left-0 w-64 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
-                        <a href="#vih" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">VIH</a>
+                        <a href="#informacion" onclick="toggleAcordeon('vih')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">VIH</a>
                         <a href="#informacion" onclick="toggleAcordeon('its')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Infecciones de transmisión sexual</a>
                         <a href="#informacion" onclick="toggleAcordeon('trans')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Población trans</a>
                         <a href="#informacion" onclick="toggleAcordeon('esi')" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">ESI</a>
@@ -122,7 +122,7 @@
                     <span>Información</span> <i data-lucide="chevron-down" class="w-4 h-4"></i>
                 </button>
                 <div id="submenu-info-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
-                    <a href="#vih" class="block py-1 hover:text-[#41b8bf]">▪ VIH</a>
+                    <a href="#informacion" onclick="toggleAcordeon('vih')" class="block py-1 hover:text-[#41b8bf]">▪ VIH</a>
                     <a href="#informacion" onclick="toggleAcordeon('its')" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
                     <a href="#informacion" onclick="toggleAcordeon('trans')" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
                     <a href="#informacion" onclick="toggleAcordeon('esi')" class="block py-1 hover:text-[#41b8bf]">▪ ESI</a>
@@ -180,7 +180,7 @@
                 <a href="#aportar" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
                     <i data-lucide="heart-handshake" class="w-5 h-5"></i> Aportá a Ciclo
                 </a>
-                <a href="#vih" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
+                <a href="#informacion" onclick="toggleAcordeon('vih')" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
                     <i data-lucide="activity" class="w-5 h-5"></i> VIH
                 </a>
             </div>
@@ -553,20 +553,20 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE INFORMACIÓN REDISEÑADA (TARJETAS INTERACTIVAS) -->
+    <!-- SECCIÓN DE INFORMACIÓN REDISEÑADA (TARJETAS INTERACTIVAS Y ACORDEÓN) -->
     <section id="informacion" class="py-20 px-4 max-w-6xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Ejes Temáticos</span>
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Información y Derechos</h2>
-                <p class="text-sm text-slate-600 mt-2">Hacé clic en cada área para explorar la información clave de nuestro trabajo.</p>
+                <p class="text-sm text-slate-600 mt-2">Hacé clic en cada área para explorar la información clave basada en evidencia.</p>
             </div>
 
             <!-- Grilla Principal de Tarjetas de Información -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Tarjeta 1: VIH -->
-                <a href="#vih" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                <button type="button" onclick="toggleAcordeon('vih')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
                             <i data-lucide="activity" class="w-6 h-6"></i>
@@ -577,11 +577,11 @@
                         </p>
                     </div>
                     <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
-                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        Ver información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:translate-y-0.5"></i>
                     </div>
-                </a>
+                </button>
 
-                <!-- Tarjeta 2: ITS (Despliega Acordeón) -->
+                <!-- Tarjeta 2: ITS -->
                 <button type="button" onclick="toggleAcordeon('its')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
@@ -597,7 +597,7 @@
                     </div>
                 </button>
 
-                <!-- Tarjeta 3: Población Trans (Despliega Acordeón) -->
+                <!-- Tarjeta 3: Población Trans -->
                 <button type="button" onclick="toggleAcordeon('trans')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
@@ -613,7 +613,7 @@
                     </div>
                 </button>
 
-                <!-- Tarjeta 4: ESI (Despliega Acordeón) -->
+                <!-- Tarjeta 4: ESI -->
                 <button type="button" onclick="toggleAcordeon('esi')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
@@ -631,11 +631,148 @@
 
             </div>
 
-            <!-- CONTENIDO DESPLEGABLE DE ACORDEÓN (ITS, TRANS, ESI) -->
+            <!-- CONTENIDO DESPLEGABLE DE ACORDEÓN -->
             <div id="acordeon-contenido" class="hidden mt-8 bg-purple-50/90 border border-purple-200 p-6 md:p-8 rounded-2xl relative shadow-md">
                 <button type="button" onclick="cerrarAcordeon()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
+
+                <!-- Panel VIH (Con sus pestañas científicas intactas) -->
+                <div id="panel-vih" class="panel-info hidden space-y-6">
+                    <div class="text-center max-w-xl mx-auto mb-4">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block text-slate-900" style="background-color: #41b8bf;">Información Científica</span>
+                        <h3 class="text-xl font-bold uppercase" style="color: #2e1044;">Todo lo que tenés que saber sobre VIH</h3>
+                    </div>
+
+                    <!-- Botones de Pestañas (Tabs) -->
+                    <div class="flex flex-wrap gap-2 justify-center border-b border-slate-200 pb-4">
+                        <button type="button" onclick="cambiarTab('que-es')" id="btn-que-es" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-[#2e1044] text-white shadow-sm flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> ¿Qué es?
+                        </button>
+                        <button type="button" onclick="cambiarTab('diferencia')" id="btn-diferencia" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="git-compare" class="w-3.5 h-3.5"></i> VIH vs sida
+                        </button>
+                        <button type="button" onclick="cambiarTab('test')" id="btn-test" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="search" class="w-3.5 h-3.5"></i> Testeo
+                        </button>
+                        <button type="button" onclick="cambiarTab('vias')" id="btn-vias" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Transmisión
+                        </button>
+                        <button type="button" onclick="cambiarTab('prevencion')" id="btn-prevencion" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> PrEP/PEP
+                        </button>
+                        <button type="button" onclick="cambiarTab('tratamiento')" id="btn-tratamiento" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="activity" class="w-3.5 h-3.5"></i> I = I
+                        </button>
+                        <button type="button" onclick="cambiarTab('ley')" id="btn-ley" class="tab-btn px-3 py-2 rounded-xl text-xs font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5 cursor-pointer">
+                            <i data-lucide="scale" class="w-3.5 h-3.5"></i> Ley
+                        </button>
+                    </div>
+
+                    <!-- Contenido de las Pestañas de VIH -->
+                    <div class="bg-white p-6 rounded-2xl border border-purple-100 min-h-[220px] flex flex-col justify-center">
+                        <div id="tab-que-es" class="tab-content space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="help-circle" class="w-5 h-5" style="color: #e30381;"></i> ¿Qué es el VIH?
+                            </h4>
+                            <p class="text-slate-700 text-xs md:text-sm leading-relaxed">
+                                El <strong>VIH</strong> (Virus de Inmunodeficiencia Humana) es un virus que ataca al sistema inmunológico, específicamente a los glóbulos blancos (células CD4), encargados de defender al organismo de las infecciones.
+                            </p>
+                            <p class="text-slate-700 text-xs md:text-sm leading-relaxed">
+                                Con el tratamiento adecuado y oportuno, el virus se mantiene controlado, permitiendo que el sistema inmunitario se mantenga fuerte y garantizando una expectativa y calidad de vida plena y saludable.
+                            </p>
+                        </div>
+
+                        <div id="tab-diferencia" class="tab-content hidden space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="git-compare" class="w-5 h-5" style="color: #e30381;"></i> Diferencia entre VIH y sida
+                            </h4>
+                            <div class="grid md:grid-cols-2 gap-3 pt-1">
+                                <div class="bg-purple-50/50 p-3 rounded-xl border border-slate-200">
+                                    <h5 class="font-bold text-slate-900 mb-1 text-xs" style="color: #2e1044;">▪ VIH (El Virus)</h5>
+                                    <p class="text-[11px] text-slate-600">Es el agente infeccioso. Tener VIH no significa estar enfermo de sida; una persona diagnosticada a tiempo puede no desarrollar síntomas graves jamás.</p>
+                                </div>
+                                <div class="bg-purple-50/50 p-3 rounded-xl border border-slate-200">
+                                    <h5 class="font-bold text-slate-900 mb-1 text-xs" style="color: #e30381;">▪ sida (La Etapa Avanzada)</h5>
+                                    <p class="text-[11px] text-slate-600">Síndrome de inmunodeficiencia adquirida. Es la etapa avanzada de la infección que ocurre cuando el VIH no ha sido tratado, deteriorando las defensas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab-test" class="tab-content hidden space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="search" class="w-5 h-5" style="color: #e30381;"></i> ¿Cómo me doy cuenta si tengo VIH?
+                            </h4>
+                            <p class="text-slate-700 text-xs md:text-sm leading-relaxed">
+                                <strong>El VIH no da síntomas físicos evidentes durante años.</strong> Una persona puede tener el virus y sentirse perfectamente bien. La única manera certera de saberlo es a través de un test de VIH. Es voluntario, gratuito, confidencial y rápido en hospitales y centros de salud de todo el país.
+                            </p>
+                            <div class="pt-1">
+                                <a href="https://buenosaires.gob.ar/gcaba_historico/test-de-vih-y-sifilis-y-centros-de-testeo-0" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-2 rounded-xl transition-all shadow-sm hover:opacity-90 text-slate-900" style="background-color: #41b8bf;">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Buscar centro de testeo en CABA
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="tab-vias" class="tab-content hidden space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="share-2" class="w-5 h-5" style="color: #e30381;"></i> Vías de transmisión
+                            </h4>
+                            <p class="text-slate-700 text-xs md:text-sm leading-relaxed">
+                                El virus se encuentra exclusivamente en determinados fluidos corporales de una persona con VIH: <strong>sangre, semen, líquido preseminal, secreciones rectales, vaginales y leche materna.</strong>
+                            </p>
+                            <div class="grid sm:grid-cols-3 gap-2 pt-1 text-[11px]">
+                                <div class="bg-purple-50/50 p-2.5 rounded-xl border border-slate-200">
+                                    <strong>1. Vía Sexual:</strong> Relaciones anales o vaginales sin uso correcto de preservativo o campo de látex.
+                                </div>
+                                <div class="bg-purple-50/50 p-2.5 rounded-xl border border-slate-200">
+                                    <strong>2. Vía Sanguínea:</strong> Compartir jeringas, agujas o elementos cortopunzantes no esterilizados.
+                                </div>
+                                <div class="bg-purple-50/50 p-2.5 rounded-xl border border-slate-200">
+                                    <strong>3. Vía Perinatal:</strong> Durante gestación, parto o lactancia si no hay tratamiento.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab-prevencion" class="tab-content hidden space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="shield-check" class="w-5 h-5" style="color: #e30381;"></i> Prevención combinada: PrEP y PEP
+                            </h4>
+                            <div class="space-y-2 text-xs text-slate-700">
+                                <div class="bg-purple-50/50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-bold mb-0.5" style="color: #2e1044;">▪ PrEP (Profilaxis Pre-Exposición):</strong>
+                                    <p>Estrategia donde personas sin VIH con prácticas de exposición toman medicación antirretroviral para reducir la posibilidad de adquirirlo, recomendada por la OMS junto al preservativo.</p>
+                                </div>
+                                <div class="bg-purple-50/50 p-3 rounded-xl border border-slate-200">
+                                    <strong class="text-slate-900 block font-bold mb-0.5" style="color: #2e1044;">▪ PEP (Profilaxis Post-Exposición):</strong>
+                                    <p>Uso de medicamentos dentro de las 72 hs de una situación de riesgo por 28 días. Recordá que deben brindarte el tratamiento completo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab-tratamiento" class="tab-content hidden space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="activity" class="w-5 h-5" style="color: #e30381;"></i> I = I (Indetectable = Intransmisible)
+                            </h4>
+                            <p class="text-slate-700 text-xs md:text-sm leading-relaxed">
+                                Las personas que viven con VIH y toman tratamiento antirretroviral logran disminuir la carga viral por debajo de valores detectables. Se comprobó que al estar indetectable, <strong>dejan de transmitir el virus por vía sexual.</strong> Suspender el tratamiento revierte la indetectabilidad.
+                            </p>
+                        </div>
+
+                        <div id="tab-ley" class="tab-content hidden space-y-3">
+                            <h4 class="text-base font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                                <i data-lucide="scale" class="w-5 h-5" style="color: #e30381;"></i> Ley Nacional de VIH (Nº 27.675)
+                            </h4>
+                            <p class="text-slate-700 text-xs md:text-sm leading-relaxed">
+                                Sancionada por activismo comunitario, garantiza acceso universal y gratuito a medicamentos, prohíbe pruebas de VIH en exámenes laborales y protege contra la discriminación.
+                            </p>
+                            <div class="pt-1">
+                                <a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/266657/20220718" target="_blank" class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-2 rounded-xl transition-all shadow-sm hover:opacity-90 text-white" style="background-color: #e30381;">
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Leer Ley en Boletín Oficial
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Panel ITS -->
                 <div id="panel-its" class="panel-info hidden space-y-3">
@@ -677,159 +814,6 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- SECCIÓN INTERACTIVA: VIH (ID: vih) -->
-    <section id="vih" class="py-20 px-4 max-w-5xl mx-auto">
-        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
-            <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">INFORMACION CIENTIFICA</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">TODO LO QUE TENES QUE SABER SOBRE VIH</h2>
-                <p class="text-sm text-slate-600 mt-2">Hacé clic en cada categoría para explorar la información clave basada en evidencia.</p>
-            </div>
-
-            <!-- BOTONES DE PESTAÑAS (TABS) -->
-            <div class="flex flex-wrap gap-2 justify-center mb-8 border-b border-slate-200 pb-4">
-                <button type="button" onclick="cambiarTab('que-es')" id="btn-que-es" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-[#2e1044] text-white shadow-sm flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="help-circle" class="w-4 h-4"></i> ¿Qué es el VIH?
-                </button>
-                <button type="button" onclick="cambiarTab('diferencia')" id="btn-diferencia" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="git-compare" class="w-4 h-4"></i> VIH vs. sida
-                </button>
-                <button type="button" onclick="cambiarTab('test')" id="btn-test" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="search" class="w-4 h-4"></i> ¿Cómo saber si lo tengo?
-                </button>
-                <button type="button" onclick="cambiarTab('vias')" id="btn-vias" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="share-2" class="w-4 h-4"></i> Vías de transmisión
-                </button>
-                <button type="button" onclick="cambiarTab('prevencion')" id="btn-prevencion" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="shield-check" class="w-4 h-4"></i> Prevención & PrEP/PEP
-                </button>
-                <button type="button" onclick="cambiarTab('tratamiento')" id="btn-tratamiento" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="activity" class="w-4 h-4"></i> I = I
-                </button>
-                <button type="button" onclick="cambiarTab('ley')" id="btn-ley" class="tab-btn px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-2 cursor-pointer">
-                    <i data-lucide="scale" class="w-4 h-4"></i> Ley de VIH
-                </button>
-            </div>
-
-            <!-- CONTENIDO DE LAS PESTAÑAS -->
-            <div class="bg-purple-50/70 border border-purple-100 p-6 md:p-8 rounded-2xl min-h-[260px] flex flex-col justify-center">
-                
-                <div id="tab-que-es" class="tab-content space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="help-circle" class="w-6 h-6" style="color: #e30381;"></i> ¿Qué es el VIH?
-                    </h3>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        El <strong>VIH</strong> (Virus de Inmunodeficiencia Humana) es un virus que ataca al sistema inmunológico, específicamente a los glóbulos blancos (células CD4), encargados de defender al organismo de las infecciones.
-                    </p>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Con el tratamiento adecuado y oportuno, el virus se mantiene controlado, permitiendo que el sistema inmunitario se mantenga fuerte y garantizando una expectativa y calidad de vida plena y saludable.
-                    </p>
-                </div>
-
-                <div id="tab-diferencia" class="tab-content hidden space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="git-compare" class="w-6 h-6" style="color: #e30381;"></i> Diferencia entre VIH y sida
-                    </h3>
-                    <div class="grid md:grid-cols-2 gap-4 pt-2">
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
-                            <h4 class="font-bold text-slate-900 mb-1" style="color: #2e1044;">▪ VIH (El Virus)</h4>
-                            <p class="text-xs md:text-sm text-slate-600">Es el agente infeccioso. Tener VIH no significa estar enfermo de sida; una persona diagnosticada a tiempo puede no desarrollar síntomas graves jamás.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
-                            <h4 class="font-bold text-slate-900 mb-1" style="color: #e30381;">▪ sida (La Etapa Avanzada)</h4>
-                            <p class="text-xs md:text-sm text-slate-600">Síndrome de inmunodeficiencia adquirida. Es la etapa avanzada de la infección que ocurre cuando el VIH no ha sido tratado, deteriorando las defensas.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="tab-test" class="tab-content hidden space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="search" class="w-6 h-6" style="color: #e30381;"></i> ¿Cómo me doy cuenta si tengo VIH?
-                    </h3>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        <strong>El VIH no da síntomas físicos evidentes durante años.</strong> Una persona puede tener el virus y sentirse perfectamente bien. 
-                    </p>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        La única manera certera de saberlo es a través de un <strong>test de VIH</strong> (análisis de sangre o prueba rápida). Es voluntario, gratuito, confidencial y rápido en hospitales y centros de salud de todo el país.
-                    </p>
-                    <div class="pt-2">
-                        <a href="https://buenosaires.gob.ar/gcaba_historico/test-de-vih-y-sifilis-y-centros-de-testeo-0" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm hover:opacity-90 text-slate-900" style="background-color: #41b8bf;">
-                            <i data-lucide="map-pin" class="w-4 h-4"></i> Si estás en CABA podés buscar el centro de testeo más cercano
-                        </a>
-                    </div>
-                </div>
-
-                <div id="tab-vias" class="tab-content hidden space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="share-2" class="w-6 h-6" style="color: #e30381;"></i> Vías de transmisión
-                    </h3>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        El virus se encuentra exclusivamente en determinados fluidos corporales de una persona con VIH: **sangre, semen, líquido preseminal, secreciones rectales, vaginales y leche materna.**
-                    </p>
-                    <div class="grid sm:grid-cols-3 gap-3 pt-2 text-xs md:text-sm">
-                        <div class="bg-white p-3 rounded-xl border border-slate-200">
-                            <strong>1. Vía Sexual:</strong> Relaciones anales o vaginales sin uso correcto de preservativo o campo de látex.
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-slate-200">
-                            <strong>2. Vía Sanguínea:</strong> Compartir jeringas, agujas o elementos cortopunzantes no esterilizados.
-                        </div>
-                        <div class="bg-white p-3 rounded-xl border border-slate-200">
-                            <strong>3. Vía Perinatal:</strong> Durante la gestación, parto o lactancia si no se cuenta con tratamiento.
-                        </div>
-                    </div>
-                </div>
-
-                <div id="tab-prevencion" class="tab-content hidden space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="shield-check" class="w-6 h-6" style="color: #e30381;"></i> Prevención combinada: PrEP y PEP
-                    </h3>
-                    <div class="space-y-3 text-xs md:text-sm text-slate-700">
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-1">
-                            <strong class="text-slate-900 block font-bold text-sm" style="color: #2e1044;">▪ PrEP (Profilaxis Pre-Exposición):</strong>
-                            <p>Es una de las estrategias de prevención del VIH en la cual las personas que no tienen VIH, pero que tienen prácticas que pueden exponerlos a la transmisión del virus, toman medicación antirretroviral y así reducen la posibilidad de adquirirlo. La PrEP está recomendada por la Organización Mundial de la Salud (OMS) como parte del abordaje de la prevención combinada junto con el preservativo.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-1">
-                            <strong class="text-slate-900 block font-bold text-sm" style="color: #2e1044;">▪ PEP (Profilaxis Post-Exposición):</strong>
-                            <p>La PEP es el uso de medicamentos para reducir el riesgo de adquirir VIH y otras ITS. En el caso del VIH se deben administrar antirretrovirales dentro de las 72 hs de la situación de riesgo y tomar por 28 días. Recordá que te tienen que brindar el tratamiento completo para que sea efectivo.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="tab-tratamiento" class="tab-content hidden space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="activity" class="w-6 h-6" style="color: #e30381;"></i> I = I
-                    </h3>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Indetectable = intransmisible es un concepto que está relacionado con sostener el tratamiento antirretroviral. Las personas que viven con VIH y toman tratamiento antirretroviral logran disminuir la cantidad de virus por debajo de los valores detectables. A esto llamamos estar indetectable. Y se comprobó que cuando una persona está indetectable deja de transmitir el virus a través de las relaciones sexuales. A medida que tengamos más conocimiento y más resultados de ensayos clínicos, podremos saber si el I = I también aplica para otras formas de transmisión de VIH.
-                    </p>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Estar indetectable no quiere decir que el virus se haya eliminado o negativizado, porque al suspender el tratamiento, el virus vuelve a replicarse. Si una persona deja de tomar el tratamiento, vuelve a tener replicación viral y deja de estar indetectable.
-                    </p>
-                </div>
-
-                <div id="tab-ley" class="tab-content hidden space-y-4">
-                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="scale" class="w-6 h-6" style="color: #e30381;"></i> Ley Nacional de VIH (Nº 27.675)
-                    </h3>
-                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Sancionada tras años de lucha comunitaria y activismo en Argentina, la Ley 27.675 propone un abordaje integral desde los derechos humanos.
-                    </p>
-                    <ul class="space-y-2 text-xs md:text-sm text-slate-700">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Garantiza acceso universal y gratuito a medicamentos y testeos.</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Prohíbe las pruebas de VIH en exámenes preocupacionales laborales.</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Otorga protección contra el estigma y la discriminación.</li>
-                    </ul>
-                    <div class="pt-2">
-                        <a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/266657/20220718" target="_blank" class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm hover:opacity-90 text-white" style="background-color: #e30381;">
-                            <i data-lucide="external-link" class="w-4 h-4"></i> Leer la Ley completa en el Boletín Oficial
-                        </a>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </section>
 
@@ -958,7 +942,6 @@
             });
         });
 
-        // Si toca en cualquier otra parte de la página, se cierran los elementos abiertos
         document.addEventListener('click', () => {
             interactivos.forEach(c => c.classList.remove('active'));
         });
@@ -985,7 +968,6 @@
             }
         }
 
-        // Función corregida para manejar el acordeón de información (ITS, Trans, ESI)
         function toggleAcordeon(tipo) {
             const contenedor = document.getElementById('acordeon-contenido');
             const paneles = document.querySelectorAll('.panel-info');

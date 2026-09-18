@@ -181,7 +181,7 @@
                     <i data-lucide="heart-handshake" class="w-5 h-5"></i> Aportá a Ciclo
                 </a>
                 <a href="#informacion" onclick="toggleAcordeon('vih')" class="p-3.5 rounded-2xl transition-all shadow-md text-slate-900 hover:scale-105 flex flex-col items-center justify-center gap-2" style="background-color: #41b8bf;">
-                    <i data-lucide="activity" class="w-5 h-5"></i> VIH
+                    <i data-lucide="ribbon" class="w-5 h-5"></i> VIH
                 </a>
             </div>
 
@@ -565,11 +565,11 @@
             <!-- Grilla Principal de Tarjetas de Información -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- Tarjeta 1: VIH -->
+                <!-- Tarjeta 1: VIH (Icono de Lazo) -->
                 <button type="button" onclick="toggleAcordeon('vih')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
-                            <i data-lucide="activity" class="w-6 h-6"></i>
+                            <i data-lucide="ribbon" class="w-6 h-6"></i>
                         </div>
                         <h3 class="font-bold text-lg mb-2" style="color: #2e1044;">VIH</h3>
                         <p class="text-xs text-slate-600 leading-relaxed font-normal">
@@ -581,11 +581,11 @@
                     </div>
                 </button>
 
-                <!-- Tarjeta 2: ITS -->
+                <!-- Tarjeta 2: ITS (Icono de Test/Microscopio) -->
                 <button type="button" onclick="toggleAcordeon('its')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
-                            <i data-lucide="shield-alert" class="w-6 h-6 text-slate-900"></i>
+                            <i data-lucide="flask-conical" class="w-6 h-6 text-slate-900"></i>
                         </div>
                         <h3 class="font-bold text-lg mb-2" style="color: #2e1044;">Infecciones de Transmisión Sexual</h3>
                         <p class="text-xs text-slate-600 leading-relaxed font-normal">
@@ -637,11 +637,13 @@
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
 
-                <!-- Panel VIH (Con sus pestañas científicas intactas) -->
+                <!-- Panel VIH (Con sus pestañas científicas e ícono de lazo) -->
                 <div id="panel-vih" class="panel-info hidden space-y-6">
                     <div class="text-center max-w-xl mx-auto mb-4">
                         <span class="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-md mb-2 inline-block text-slate-900" style="background-color: #41b8bf;">Información Científica</span>
-                        <h3 class="text-xl font-bold uppercase" style="color: #2e1044;">Todo lo que tenés que saber sobre VIH</h3>
+                        <h3 class="text-xl font-bold uppercase flex items-center justify-center gap-2" style="color: #2e1044;">
+                            <i data-lucide="ribbon" class="w-5 h-5" style="color: #e30381;"></i> Todo lo que tenés que saber sobre VIH
+                        </h3>
                     </div>
 
                     <!-- Botones de Pestañas (Tabs) -->
@@ -774,10 +776,10 @@
                     </div>
                 </div>
 
-                <!-- Panel ITS -->
+                <!-- Panel ITS (Con icono de flask-conical) -->
                 <div id="panel-its" class="panel-info hidden space-y-3">
                     <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
-                        <i data-lucide="shield-alert" class="w-6 h-6" style="color: #e30381;"></i> Infecciones de Transmisión Sexual (ITS)
+                        <i data-lucide="flask-conical" class="w-6 h-6" style="color: #e30381;"></i> Infecciones de Transmisión Sexual (ITS)
                     </h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
                         Las Infecciones de Transmisión Sexual (ITS) son infecciones que se transmiten principalmente a través de las relaciones sexuales sin protección. Muchas de ellas pueden no presentar síntomas durante mucho tiempo, por lo que el testeo periódico es fundamental.

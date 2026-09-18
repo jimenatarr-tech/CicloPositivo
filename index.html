@@ -72,9 +72,9 @@
                     </button>
                     <div class="dropdown-menu hidden absolute top-full left-0 w-64 bg-[#2e1044] border border-purple-900 shadow-xl rounded-2xl py-2 mt-1 backdrop-blur-md">
                         <a href="#vih" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">VIH</a>
-                        <a href="#its" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Infecciones de transmisión sexual</a>
-                        <a href="#poblacion-trans" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Población trans</a>
-                        <a href="#esi" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">ESI</a>
+                        <a href="#informacion" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Infecciones de transmisión sexual</a>
+                        <a href="#informacion" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">Población trans</a>
+                        <a href="#informacion" class="block px-4 py-2.5 text-sm text-purple-100 hover:bg-purple-900/50 hover:text-[#41b8bf] transition-colors">ESI</a>
                     </div>
                 </div>
 
@@ -123,9 +123,9 @@
                 </button>
                 <div id="submenu-info-content" class="hidden pl-4 mt-2 space-y-2 border-l border-purple-800 text-sm">
                     <a href="#vih" class="block py-1 hover:text-[#41b8bf]">▪ VIH</a>
-                    <a href="#its" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
-                    <a href="#poblacion-trans" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
-                    <a href="#esi" class="block py-1 hover:text-[#41b8bf]">▪ ESI</a>
+                    <a href="#informacion" class="block py-1 hover:text-[#41b8bf]">▪ Infecciones de transmisión sexual</a>
+                    <a href="#informacion" class="block py-1 hover:text-[#41b8bf]">▪ Población trans</a>
+                    <a href="#informacion" class="block py-1 hover:text-[#41b8bf]">▪ ESI</a>
                 </div>
             </div>
 
@@ -553,13 +553,13 @@
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN DE INFORMACIÓN REDISEÑADA (TARJETAS INTERACTIVAS Y MODAL/ACORDEÓN) -->
+    <!-- SECCIÓN DE INFORMACIÓN REDISEÑADA (TARJETAS INTERACTIVAS) -->
     <section id="informacion" class="py-20 px-4 max-w-6xl mx-auto">
         <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Ejes Temáticos</span>
                 <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Información y Derechos</h2>
-                <p class="text-sm text-slate-600 mt-2">Seleccioná o explorá cada área clave de nuestro trabajo y asesoramiento comunitario.</p>
+                <p class="text-sm text-slate-600 mt-2">Hacé clic en cada área para explorar la información clave de nuestro trabajo.</p>
             </div>
 
             <!-- Grilla Principal de Tarjetas de Información -->
@@ -581,8 +581,8 @@
                     </div>
                 </a>
 
-                <!-- Tarjeta 2: ITS -->
-                <a href="#its" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                <!-- Tarjeta 2: ITS (Despliega Acordeón) -->
+                <button onclick="toggleAcordeon('its')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
                             <i data-lucide="shield-alert" class="w-6 h-6 text-slate-900"></i>
@@ -593,12 +593,12 @@
                         </p>
                     </div>
                     <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
-                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        Ver información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:translate-y-0.5"></i>
                     </div>
-                </a>
+                </button>
 
-                <!-- Tarjeta 3: Población Trans -->
-                <a href="#poblacion-trans" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                <!-- Tarjeta 3: Población Trans (Despliega Acordeón) -->
+                <button onclick="toggleAcordeon('trans')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #e30381;">
                             <i data-lucide="users" class="w-6 h-6"></i>
@@ -609,12 +609,12 @@
                         </p>
                     </div>
                     <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
-                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        Ver información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:translate-y-0.5"></i>
                     </div>
-                </a>
+                </button>
 
-                <!-- Tarjeta 4: ESI -->
-                <a href="#esi" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs">
+                <!-- Tarjeta 4: ESI (Despliega Acordeón) -->
+                <button onclick="toggleAcordeon('esi')" class="bg-purple-50/60 hover:bg-purple-100/70 border border-purple-100 p-6 rounded-2xl transition-all hover:scale-105 flex flex-col justify-between group cursor-pointer shadow-xs text-left w-full">
                     <div>
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-sm" style="background-color: #41b8bf;">
                             <i data-lucide="book-open" class="w-6 h-6 text-slate-900"></i>
@@ -625,11 +625,58 @@
                         </p>
                     </div>
                     <div class="mt-6 flex items-center gap-1 text-xs font-semibold" style="color: #e30381;">
-                        Ver detalles <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        Ver información <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:translate-y-0.5"></i>
                     </div>
-                </a>
+                </button>
 
             </div>
+
+            <!-- CONTENIDO DESPLEGABLE DE ACORDEÓN (ITS, TRANS, ESI) -->
+            <div id="acordeon-contenido" class="hidden mt-8 bg-purple-50/80 border border-purple-100 p-6 md:p-8 rounded-2xl relative">
+                <button onclick="cerrarAcordeon()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+
+                <!-- Panel ITS -->
+                <div id="panel-its" class="panel-info hidden space-y-3">
+                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                        <i data-lucide="shield-alert" class="w-6 h-6" style="color: #e30381;"></i> Infecciones de Transmisión Sexual (ITS)
+                    </h3>
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        Las Infecciones de Transmisión Sexual (ITS) son infecciones que se transmiten principalmente a través de las relaciones sexuales sin protección. Muchas de ellas pueden no presentar síntomas durante mucho tiempo, por lo que el testeo periódico es fundamental.
+                    </p>
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        El diagnóstico temprano permite acceder a tratamientos oportunos y eficaces, previniendo complicaciones y cuidando nuestra salud sexual de manera integral.
+                    </p>
+                </div>
+
+                <!-- Panel Trans -->
+                <div id="panel-trans" class="panel-info hidden space-y-3">
+                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                        <i data-lucide="users" class="w-6 h-6" style="color: #e30381;"></i> Población Trans
+                    </h3>
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        Trabajamos activamente por la inclusión, el respeto y la garantía de derechos integrales para las personas travestis, transexuales y transgénero.
+                    </p>
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        El acceso a la salud integral, el respeto al trato digno y la Ley de Identidad de Género son pilares fundamentales para construir una sociedad justa y libre de violencias. Brindamos asesoramiento, contención y redes comunitarias de apoyo.
+                    </p>
+                </div>
+
+                <!-- Panel ESI -->
+                <div id="panel-esi" class="panel-info hidden space-y-3">
+                    <h3 class="text-xl font-bold uppercase flex items-center gap-2" style="color: #2e1044;">
+                        <i data-lucide="book-open" class="w-6 h-6" style="color: #e30381;"></i> ESI (Educación Sexual Integral)
+                    </h3>
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        La Educación Sexual Integral (ESI) articula aspectos biológicos, psicológicos, sociales, afectivos y éticos. Es una herramienta clave para la promoción de la salud, el ejercicio de derechos y la prevención de la violencia.
+                    </p>
+                    <p class="text-slate-700 text-sm md:text-base leading-relaxed">
+                        Promovemos la ESI como un derecho fundamental en todos los ámbitos de la sociedad, fomentando el respeto por la diversidad y la construcción de vínculos saludables y libres de prejuicios.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -768,7 +815,7 @@
                         <i data-lucide="scale" class="w-6 h-6" style="color: #e30381;"></i> Ley Nacional de VIH (Nº 27.675)
                     </h3>
                     <p class="text-slate-700 text-sm md:text-base leading-relaxed">
-                        Sancionada tras años de lucha comunitaria y activismo en Argentina, la Ley 27.675 proposes un abordaje integral desde los derechos humanos.
+                        Sancionada tras años de lucha comunitaria y activismo en Argentina, la Ley 27.675 propone un abordaje integral desde los derechos humanos.
                     </p>
                     <ul class="space-y-2 text-xs md:text-sm text-slate-700">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#e30381] shrink-0"></i> Garantiza acceso universal y gratuito a medicamentos y testeos.</li>
@@ -782,60 +829,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: ITS -->
-    <section id="its" class="py-20 px-4 max-w-4xl mx-auto">
-        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
-            <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Infecciones de Transmisión Sexual (ITS)</h2>
-            </div>
-            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
-                <p>
-                    Las Infecciones de Transmisión Sexual (ITS) son infecciones que se transmiten principalmente a través de las relaciones sexuales sin protección. Muchas de ellas pueden no presentar síntomas durante mucho tiempo, por lo que el testeo periódico es fundamental.
-                </p>
-                <p>
-                    El diagnóstico temprano permite acceder a tratamientos oportunos y eficaces, previniendo complicaciones y cuidando nuestra salud sexual de manera integral.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: POBLACIÓN TRANS -->
-    <section id="poblacion-trans" class="py-20 px-4 max-w-4xl mx-auto">
-        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
-            <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">Población Trans</h2>
-            </div>
-            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
-                <p>
-                    Trabajamos activamente por la inclusión, el respeto y la garantía de derechos integrales para las personas travestis, transexuales y transgénero.
-                </p>
-                <p>
-                    El acceso a la salud integral, el respeto al trato digno y la Ley de Identidad de Género son pilares fundamentales para construir una sociedad justa y libre de violencias. Brindamos asesoramiento, contención y redes comunitarias de apoyo.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: ESI -->
-    <section id="esi" class="py-20 px-4 max-w-4xl mx-auto">
-        <div class="bg-white text-slate-800 p-8 md:p-12 rounded-3xl border border-slate-100 shadow-xl">
-            <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-md mb-3 inline-block text-slate-900" style="background-color: #41b8bf;">Información</span>
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight uppercase" style="color: #2e1044;">ESI (Educación Sexual Integral)</h2>
-            </div>
-            <div class="max-w-3xl mx-auto space-y-4 text-slate-600 text-sm md:text-base font-normal leading-relaxed">
-                <p>
-                    La Educación Sexual Integral (ESI) articula aspectos biológicos, psicológicos, sociales, afectivos y éticos. Es una herramienta clave para la promoción de la salud, el ejercicio de derechos y la prevención de la violencia.
-                </p>
-                <p>
-                    Promovemos la ESI como un derecho fundamental en todos los ámbitos de la sociedad, fomentando el respeto por la diversidad y la construcción de vínculos saludables y libres de prejuicios.
-                </p>
             </div>
         </div>
     </section>
@@ -934,7 +927,7 @@
         });
 
         let autoplay = setInterval(() => {
-            if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10) {
+            if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth - 10)5 {
                 carrusel.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
                 carrusel.scrollBy({ left: carrusel.clientWidth * 0.8, behavior: 'smooth' });
@@ -990,6 +983,25 @@
                 btnActivo.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
                 btnActivo.classList.add('bg-[#2e1044]', 'text-white', 'shadow-sm');
             }
+        }
+
+        // Función para manejar el acordeón de información (ITS, Trans, ESI)
+        function toggleAcordeon(tipo) {
+            const contenedor = document.getElementById('acordeon-contenido');
+            const paneles = document.querySelectorAll('.panel-info');
+            
+            paneles.forEach(p => p.classList.add('hidden'));
+            
+            const panelActivo = document.getElementById('panel-' + tipo);
+            if (panelActivo) {
+                panelActivo.classList.remove('hidden');
+                contenedor.classList.remove('hidden');
+                contenedor.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function cerrarAcordeon() {
+            document.getElementById('acordeon-contenido').classList.add('hidden');
         }
     </script>
 </body>
